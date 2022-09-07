@@ -39,10 +39,65 @@ textarea {
 .inner {
   width: 92.523vw;
 }
+/* ドロワーメニュー */
+#coverlayer {
+  width: 1px;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+  opacity: 1;
+  transition: 0.5s;
+}
+.drawer_menu {
+  position: fixed;
+  top: 101px;
+  /* 幅の分左にずらした状態で非表示 */
+  left: -171px;
+  width: 171px;
+  opacity: 0;
+  transition: 0.5s;
+}
+nav {
+  margin-bottom: 60px;
+}
+nav ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 34px;
+}
+nav ul li:last-of-type {
+  margin-bottom: 0;
+}
+nav ul li img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  padding-right: 6px;
+}
+nav ul li a {
+  color: #000;
+  font-size: 24px;
+  font-weight: 500;
+  display: block;
+}
+nav + .sns_link {
+  display: flex;
+  width: 158px;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+nav + .sns_link img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
 /* ヘッダー */
 header {
   height: 48px;
-  background-color: #ccc;
 }
 header .inner {
   height: 100%;
@@ -63,7 +118,7 @@ header .inner {
   top: 0;
   left: 0;
   display: block;
-  width: 30px; /* 横幅 */
+  width: 27px; /* 横幅 */
   height: 4px; /* 1本辺りの高さ */
   background: #000; /* 線の色 */
   transition: 0.3s;
@@ -97,10 +152,13 @@ header a.btnTicket {
   padding: 3px 9px;
   border-radius: 3px;
   font-size: 14px;
+  font-weight: 700;
 }
 header a.btnTicket .icon {
   padding-right: 4px;
 }
+
+/* メインビジュアル */
 
 /* TAB用 */
 @media screen and (min-width: 600px) {
