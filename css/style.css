@@ -240,6 +240,37 @@ header a.btnTicket .icon {
   top: 120.327vw;
 }
 
+/* SNSシェア */
+.sns_share {
+  background-color: #000;
+  padding: 16px 0;
+}
+.sns_share ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 4.673vw;
+}
+.sns_share ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40.888vw;
+  padding: 16px 0;
+  border: 2px solid #fff;
+  border-radius: 3px;
+}
+.sns_share ul li img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+.sns_share ul li a {
+  color: #fff;
+  display: block;
+  padding-left: 1em;
+}
+
 /* TAB用 */
 @media screen and (min-width: 600px) {
 }
