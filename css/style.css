@@ -3,7 +3,15 @@
 /* 共通 */
 @font-face {
   font-family: 'Heebo';
-  src: url('../font/Heebo-VariableFont_wght.ttf');
+  src: url('../font/Heebo-Regular.ttf');
+}
+@font-face {
+  font-family: 'Heebo-Bold';
+  src: url('../font/Heebo-Bold.ttf');
+}
+@font-face {
+  font-family: 'Heebo-Black';
+  src: url('../font/Heebo-Black.ttf');
 }
 * {
   box-sizing: border-box;
@@ -152,13 +160,85 @@ header a.btnTicket {
   padding: 3px 9px;
   border-radius: 3px;
   font-size: 14px;
-  font-weight: 700;
+  font-family: 'Heebo-Bold';
 }
 header a.btnTicket .icon {
   padding-right: 4px;
 }
 
 /* メインビジュアル */
+.top_main {
+  height: 139.486vw;
+  background-image: -webkit-image-set(
+    url(../images/top_main/top_main_sp@856.jpg) 1x,
+    url(../images/top_main/top_main_sp@856.jpg) 2x,
+    url(../images/top_main/top_main_sp@1284.jpg) 3x
+  );
+  background-image: image-set(
+    url(../images/top_main/top_main_sp@856.jpg) 1x,
+    url(../images/top_main/top_main_sp@856.jpg) 2x,
+    url(../images/top_main/top_main_sp@1284.jpg) 3x
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+/* メインビジュアル上の画像・テキスト 共通 */
+.top_main .logo,
+.top_main .date,
+.top_main .time,
+.top_main .place,
+.top_main .message {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+/* メインビジュアル上のテキスト 共通 */
+.top_main .date,
+.top_main .time,
+.top_main .place {
+  color: #fff;
+  /* テキストの折返しをなくす */
+  white-space: nowrap;
+  text-shadow: 0px 4px 4px rgba(25, 53, 45, 0.8);
+}
+.top_main .logo {
+  width: 61.215vw;
+  top: 14.019vw;
+}
+.top_main .date {
+  font-size: 9.346vw;
+  font-family: 'Heebo-Black';
+  top: 80.14vw;
+}
+.top_main .date .day {
+  font-size: 5.374vw;
+  padding: 0 0.2em;
+}
+.top_main .date .symbol {
+  padding-right: 0.2em;
+}
+.top_main .time {
+  font-size: 3.738vw;
+  font-family: 'Heebo-Bold';
+  position: absolute;
+  top: 92.757vw;
+}
+.top_main .time span {
+  font-size: 4.206vw;
+  padding: 0 0.2em;
+}
+.top_main .place {
+  font-size: 4.206vw;
+  font-weight: bold;
+  position: absolute;
+  top: 97.897vw;
+}
+.top_main .message {
+  width: 59.579vw;
+  position: absolute;
+  top: 120.327vw;
+}
 
 /* TAB用 */
 @media screen and (min-width: 600px) {
