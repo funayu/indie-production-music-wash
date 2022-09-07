@@ -13,7 +13,7 @@ body {
   color: #000;
   background: #fff;
   line-height: 1.5;
-  font-family: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', Meiryo, 'sans-serif';
+  font-family: 'Heebo', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', Meiryo, 'sans-serif';
 }
 img {
   vertical-align: bottom;
@@ -35,7 +35,72 @@ textarea {
 }
 
 /* SP用 */
-
+/* 共通 */
+.inner {
+  width: 92.523vw;
+}
+/* ヘッダー */
+header {
+  height: 48px;
+  background-color: #ccc;
+}
+header .inner {
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+.btnHamburger {
+  /* TODO:クリック後はfixedにする */
+  position: absolute;
+  top: 13px;
+  left: 0;
+  width: 30px; /* クリックエリアの横幅*/
+  height: 20px; /* クリックエリアの高さ*/
+  cursor: pointer;
+}
+.btnHamburger .line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 30px; /* 横幅 */
+  height: 4px; /* 1本辺りの高さ */
+  background: #000; /* 線の色 */
+  transition: 0.3s;
+}
+.btnHamburger .line_01 {
+  top: 0;
+}
+.btnHamburger .line_02 {
+  top: 8px;
+}
+.btnHamburger .line_03 {
+  top: 16px;
+}
+header h1 {
+  width: 144px;
+  position: absolute;
+  top: 12.25px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+header h1 img {
+  vertical-align: middle;
+}
+header a.btnTicket {
+  position: absolute;
+  right: 0;
+  top: 10.5px;
+  display: block;
+  color: white;
+  background-color: #e56b36;
+  padding: 3px 9px;
+  border-radius: 3px;
+  font-size: 14px;
+}
+header a.btnTicket .icon {
+  padding-right: 4px;
+}
 
 /* TAB用 */
 @media screen and (min-width: 600px) {
