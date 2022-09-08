@@ -13,6 +13,8 @@ $accent_orange_dark: #a13f15;
 $accent_orange_button: #e56b36;
 $accent_blue_with-white: #4a9ec2;
 $accent_orange_with-white: #cc8262;
+// 日本語フォントのベース
+$base_ja_font: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', Meiryo, 'sans-serif';
 
 /* 共通 */
 @font-face {
@@ -35,7 +37,7 @@ body {
   color: $main_black;
   background: $base_white;
   line-height: 1.5;
-  font-family: 'Heebo', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', Meiryo, 'sans-serif';
+  font-family: 'Heebo', $base_ja_font;
 }
 img {
   vertical-align: bottom;
@@ -603,6 +605,62 @@ article {
 
         &:last-of-type a {
           margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  // article:GOODS
+  &#goods {
+    background-color: $accent_blue_light;
+    h2 {
+      position: relative;
+      &::after {
+        content: '';
+        width: 3.5em;
+        height: 6px;
+        background-color: $accent_blue;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, -100%);
+      }
+    }
+    .goods_outer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      row-gap: 40px;
+      .goods {
+        width: calc((190 / 428) * 100vw);
+        &-image {
+          height: calc((190 / 428) * 100vw);
+          background-color: $base_white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          img {
+            width: 91.578%;
+            height: 91.578%;
+            object-fit: contain;
+          }
+        }
+        h3,
+        p {
+          text-align: center;
+          font-family: 'Heebo-Bold', $base_ja_font;
+          font-weight: bold;
+        }
+        &-name {
+          font-size: 15px;
+          padding: 10px 0;
+        }
+        &-size,
+        &-price {
+          font-size: 13px;
+        }
+        &-size {
+          padding-bottom: 4px;
         }
       }
     }

@@ -541,6 +541,60 @@ article#ticket .buy_ticket ul li a::after {
 article#ticket .buy_ticket ul li:last-of-type a {
   margin-bottom: 0;
 }
+article#goods {
+  background-color: #cfe9f5;
+}
+article#goods h2 {
+  position: relative;
+}
+article#goods h2::after {
+  content: "";
+  width: 3.5em;
+  height: 6px;
+  background-color: #52b0d9;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+}
+article#goods .goods_outer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 40px;
+}
+article#goods .goods_outer .goods {
+  width: 44.3925233645vw;
+}
+article#goods .goods_outer .goods-image {
+  height: 44.3925233645vw;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+article#goods .goods_outer .goods-image img {
+  width: 91.578%;
+  height: 91.578%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+article#goods .goods_outer .goods h3,
+article#goods .goods_outer .goods p {
+  text-align: center;
+  font-family: "Heebo-Bold", "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, "sans-serif";
+  font-weight: bold;
+}
+article#goods .goods_outer .goods-name {
+  font-size: 15px;
+  padding: 10px 0;
+}
+article#goods .goods_outer .goods-size, article#goods .goods_outer .goods-price {
+  font-size: 13px;
+}
+article#goods .goods_outer .goods-size {
+  padding-bottom: 4px;
+}
 
 /*
 TAB用
