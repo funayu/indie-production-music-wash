@@ -418,29 +418,16 @@ article#time_table .time_table .time_table_row .time {
 article#time_table .time_table .time_table_row .time > div {
   transform: translateY(-50%);
 }
-article#time_table .time_table .time_table_row .stage_1,
-article#time_table .time_table .time_table_row .stage_2 {
+article#time_table .time_table .time_table_row .stage {
   width: 41.4141414141%;
   position: relative;
 }
-article#time_table .time_table .time_table_row .stage_1 {
-  background-color: #cfe9f5;
-}
-article#time_table .time_table .time_table_row .stage_2 {
-  background-color: #f9dacc;
-}
-article#time_table .time_table .artist_name {
+article#time_table .time_table .time_table_row .stage .artist_name {
   padding: 2.5px 0 0 8px;
   height: 100%;
   font-family: "Heebo-Bold";
 }
-article#time_table .time_table .stage_1 .artist_name {
-  background-color: #52b0d9;
-}
-article#time_table .time_table .stage_2 .artist_name {
-  background-color: #ed9772;
-}
-article#time_table .time_table .time_label {
+article#time_table .time_table .time_table_row .stage .time_label {
   position: absolute;
   top: 0;
   left: 0;
@@ -449,10 +436,22 @@ article#time_table .time_table .time_label {
   padding: 2px 8px;
   color: #fff;
 }
-article#time_table .time_table .stage_1 .time_label {
+article#time_table .time_table .time_table_row .stage.stage_1 {
+  background-color: #cfe9f5;
+}
+article#time_table .time_table .time_table_row .stage.stage_1 .artist_name {
+  background-color: #52b0d9;
+}
+article#time_table .time_table .time_table_row .stage.stage_1 .time_label {
   background-color: #14465c;
 }
-article#time_table .time_table .stage_2 .time_label {
+article#time_table .time_table .time_table_row .stage.stage_2 {
+  background-color: #f9dacc;
+}
+article#time_table .time_table .time_table_row .stage.stage_2 .artist_name {
+  background-color: #ed9772;
+}
+article#time_table .time_table .time_table_row .stage.stage_2 .time_label {
   background-color: #a13f15;
 }
 

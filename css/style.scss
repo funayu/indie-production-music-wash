@@ -468,44 +468,45 @@ article {
           }
         }
 
-        .stage_1,
-        .stage_2 {
+        .stage {
           width: calc((164 / 396) * 100%);
           position: relative;
-        }
-        .stage_1 {
-          background-color: #cfe9f5;
-        }
-        .stage_2 {
-          background-color: #f9dacc;
-        }
-      }
 
-      .artist_name {
-        padding: 2.5px 0 0 8px;
-        height: 100%;
-        font-family: 'Heebo-Bold';
-      }
-      .stage_1 .artist_name {
-        background-color: #52b0d9;
-      }
-      .stage_2 .artist_name {
-        background-color: #ed9772;
-      }
-      .time_label {
-        position: absolute;
-        top: 0;
-        left: 0;
-        transform: translateY(-100%);
-        font-size: 12px;
-        padding: 2px 8px;
-        color: #fff;
-      }
-      .stage_1 .time_label {
-        background-color: #14465c;
-      }
-      .stage_2 .time_label {
-        background-color: #a13f15;
+          .artist_name {
+            padding: 2.5px 0 0 8px;
+            height: 100%;
+            font-family: 'Heebo-Bold';
+          }
+          .time_label {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translateY(-100%);
+            font-size: 12px;
+            padding: 2px 8px;
+            color: #fff;
+          }
+          &.stage_1 {
+            background-color: #cfe9f5;
+
+            .artist_name {
+              background-color: #52b0d9;
+            }
+            .time_label {
+              background-color: #14465c;
+            }
+          }
+          &.stage_2 {
+            background-color: #f9dacc;
+
+            .artist_name {
+              background-color: #ed9772;
+            }
+            .time_label {
+              background-color: #a13f15;
+            }
+          }
+        }
       }
     }
   }
