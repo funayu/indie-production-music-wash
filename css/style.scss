@@ -102,7 +102,7 @@ nav {
         padding-right: 6px;
       }
       a {
-        color: #000;
+        color: $main_black;
         font-size: 24px;
         font-weight: 500;
         display: block;
@@ -149,7 +149,7 @@ header {
       display: block;
       width: 27px; /* 横幅 */
       height: 4px; /* 1本辺りの高さ */
-      background: #000; /* 線の色 */
+      background: $main_black; /* 線の色 */
       transition: 0.3s;
     }
     .line_01 {
@@ -179,7 +179,7 @@ header {
     top: 10.5px;
     display: block;
     color: white;
-    background-color: #e56b36;
+    background-color: $accent_orange_button;
     padding: 3px 9px;
     border-radius: 3px;
     font-size: 14px;
@@ -223,7 +223,7 @@ header {
   .date,
   .time,
   .place {
-    color: #fff;
+    color: $base_white;
     /* テキストの折返しをなくす */
     white-space: nowrap;
     text-shadow: 0px 4px 4px rgba(25, 53, 45, 0.8);
@@ -271,7 +271,7 @@ header {
 
 /* SNSシェア */
 .sns_share {
-  background-color: #000;
+  background-color: $main_black;
   padding: 16px 0;
 
   ul {
@@ -286,7 +286,7 @@ header {
       justify-content: center;
       width: 40.888vw;
       padding: 16px 0;
-      border: 2px solid #fff;
+      border: 2px solid $base_white;
       border-radius: 3px;
 
       img {
@@ -295,7 +295,7 @@ header {
         object-fit: contain;
       }
       a {
-        color: #fff;
+        color: $base_white;
         display: block;
         padding-left: 1em;
       }
@@ -319,7 +319,7 @@ article {
   /* article:NEWS */
   &#news {
     h2 span {
-      color: #4a9ec2;
+      color: $accent_blue_with-white;
     }
     dl {
       dt {
@@ -328,7 +328,7 @@ article {
       }
       dd a {
         text-decoration: underline;
-        color: #000;
+        color: $main_black;
       }
     }
   }
@@ -339,11 +339,11 @@ article {
       margin-bottom: 51px;
 
       span {
-        color: #cc8262;
+        color: $accent_orange_with-white;
       }
     }
     section {
-      border: 4px solid #000;
+      border: 4px solid $main_black;
       position: relative;
       padding: 67px 0 85px;
       display: flex;
@@ -357,7 +357,7 @@ article {
       h3 {
         font-family: 'Heebo-Bold';
         font-size: 27px;
-        background-color: #fff;
+        background-color: $base_white;
         padding: 10px;
         display: inline-block;
         position: absolute;
@@ -390,7 +390,7 @@ article {
       width: 100%;
 
       span {
-        color: #4a9ec2;
+        color: $accent_blue_with-white;
       }
     }
     .date_select {
@@ -405,8 +405,8 @@ article {
       padding: 6px 0;
 
       &.is_active {
-        color: #fff;
-        background-color: #000;
+        color: $base_white;
+        background-color: $main_black;
       }
       span {
         font-size: 16px;
@@ -427,16 +427,16 @@ article {
 
           .stage {
             > div {
-              color: #fff;
+              color: $base_white;
               text-align: center;
               line-height: 32px;
               font-family: 'Heebo-Bold';
             }
             &.stage_1 {
-              background-color: #4a9ec2;
+              background-color: $accent_blue_with-white;
             }
             &.stage_2 {
-              background-color: #cc8262;
+              background-color: $accent_orange_with-white;
             }
           }
         }
@@ -452,7 +452,7 @@ article {
             transform: translate(-50%, -50%);
             /* テキストの折返しをなくす */
             white-space: nowrap;
-            background-color: #fff;
+            background-color: $base_white;
             font-size: 14px;
             padding: 4px 8px;
           }
@@ -484,26 +484,26 @@ article {
             transform: translateY(-100%);
             font-size: 12px;
             padding: 2px 8px;
-            color: #fff;
+            color: $base_white;
           }
           &.stage_1 {
-            background-color: #cfe9f5;
+            background-color: $accent_blue_light;
 
             .artist_name {
-              background-color: #52b0d9;
+              background-color: $accent_blue;
             }
             .time_label {
-              background-color: #14465c;
+              background-color: $accent_blue_dark;
             }
           }
           &.stage_2 {
-            background-color: #f9dacc;
+            background-color: $accent_orange_light;
 
             .artist_name {
-              background-color: #ed9772;
+              background-color: $accent_orange;
             }
             .time_label {
-              background-color: #a13f15;
+              background-color: $accent_orange_dark;
             }
           }
         }
