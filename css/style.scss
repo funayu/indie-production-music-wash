@@ -665,121 +665,169 @@ article {
       }
     }
   }
-	
-	// article:ACCESS
-	&#access{
-		h2 {
-			span {
-				color: $accent_blue_with-white;
-			}
-		}
-		section{
-			&:first-of-type{
-				margin-bottom: 24px;				
-			}
-			h3{
-				font-size: 22px;
-				font-weight: bold;
-				text-align: center;
-				margin-bottom: 10px;
-			}
-			p.address{
-			margin-bottom: 20px;
-			}
-			iframe.map{
-				width:100%;
-				height:75vw;
-				margin-bottom:40px; 
-			}
-			section{
-				h4{
-					font-weight: bold;
-				}
-				p{
-					margin-bottom: 24px;
-					&:last-of-type{
-						margin-bottom: 0;
-					}
-				}
-			}
-		}		
-	}
+
+  // article:ACCESS
+  &#access {
+    h2 {
+      span {
+        color: $accent_blue_with-white;
+      }
+    }
+    section {
+      &:first-of-type {
+        margin-bottom: 24px;
+      }
+      h3 {
+        font-size: 22px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      p.address {
+        margin-bottom: 20px;
+      }
+      iframe.map {
+        width: 100%;
+        height: 75vw;
+        margin-bottom: 40px;
+      }
+      section {
+        h4 {
+          font-weight: bold;
+        }
+        p {
+          margin-bottom: 24px;
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
 }
 
-.outline{
-	padding: 54px 0 101px;
-	position: relative;
-	&::before{
-		content: "";
-		width: 92.523vw;
-		height: 2px;
-		background-color: #BCBCBC;
-		position: absolute;
-		top: 0;
-		left: 50%;
-		transform: translateX(-50%);
-	}
-	p{
-		font-weight: bold;
-		font-family: "Heebo-Bold",$base_ja_font;
-		&:last-of-type{
-			margin-bottom: 1.5em;
-		}
-	}
-	dl{
-		font-size: 13px;
-		display: flex;
-		flex-wrap: wrap;
-		dt{
-			width: calc((63 / 391) * 100%);
-			&.sponsor{
-				height: 11.215vw;
-				position: relative;
-				div{
-					position: absolute;
-					left: 0;
-					bottom: 0;
-				}
-			}
-		}
-		dd{
-			width: calc((328 / 391) * 100%);
-			&.sponsor img{
-				width: 18.224vw;
-				height: 11.215vw;
-				object-fit: contain;
-			}
-		}
-	}
+.outline {
+  padding: 54px 0 101px;
+  position: relative;
+  &::before {
+    content: '';
+    width: 92.523vw;
+    height: 2px;
+    background-color: #bcbcbc;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  p {
+    font-weight: bold;
+    font-family: 'Heebo-Bold', $base_ja_font;
+    &:last-of-type {
+      margin-bottom: 1.5em;
+    }
+  }
+  dl {
+    font-size: 13px;
+    display: flex;
+    flex-wrap: wrap;
+    dt {
+      width: calc((63 / 391) * 100%);
+      &.sponsor {
+        height: 11.215vw;
+        position: relative;
+        div {
+          position: absolute;
+          left: 0;
+          bottom: 0;
+        }
+      }
+    }
+    dd {
+      width: calc((328 / 391) * 100%);
+      &.sponsor img {
+        width: 18.224vw;
+        height: 11.215vw;
+        object-fit: contain;
+      }
+    }
+  }
 }
 
-footer{
-	background: $accent_blue_dark;
-	padding: 40px 0 20px;
-	text-align: center;
-	.logo img{
-		width: 49.533vw;
-		height: 49.533vw;
-		object-fit: contain;
-		margin-bottom: 26px;
-	}
-	.sns_link {
-		display: flex;
-		justify-content: center;
-		margin-bottom: 37px;
-		div{
-			padding: 16px;
-			img{
-				width: 32px;
-				height: 32px;
-				object-fit: contain;
-			}	
-		}
-	}
-	small{
-		color: $base_white;
-		font-size: 12px;
-	}
+footer {
+  background: $accent_blue_dark;
+  padding: 40px 0 20px;
+  text-align: center;
+  .logo img {
+    width: 49.533vw;
+    height: 49.533vw;
+    object-fit: contain;
+    margin-bottom: 26px;
+  }
+  .sns_link {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 37px;
+    div {
+      padding: 16px;
+      img {
+        width: 32px;
+        height: 32px;
+        object-fit: contain;
+      }
+    }
+  }
+  small {
+    color: $base_white;
+    font-size: 12px;
+  }
+}
+
+// コンタクトフォーム
+body.contact main article {
+  padding: 60px 0 100px;
+  h2 span {
+    color: $accent_blue;
+  }
+  form {
+    dl {
+      margin-bottom: 30px;
+      dt {
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      dd {
+        width: 100%;
+        margin-bottom: 24px;
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+        input,
+        textarea {
+          width: 100%;
+          border: 1px solid #626262;
+        }
+        input {
+          height: 44px;
+        }
+        textarea {
+          height: 140px;
+        }
+      }
+    }
+    .button {
+      text-align: center;
+      input[type='submit'] {
+        color: $base_white;
+        background-color: $accent_blue_with-white;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        width: 44.393vw;
+        padding: 10px 0;
+        font-weight: bold;
+      }
+    }
+  }
 }
 
 /*
