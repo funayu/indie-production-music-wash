@@ -13,7 +13,7 @@ $inquiry_detail = isset($_POST["inquiry_detail"])? $_POST["inquiry_detail"] : ""
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex, nofollow" />
   <meta name="description" content="MUSIC WASHへのお問い合わせはこちらからお願いします。" />
-  <title>【MUSIC WASH】お問い合わせフォーム 確認画面</title>
+  <title>【MUSIC WASH】お問い合わせフォーム 完了画面</title>
   <link rel="stylesheet" href="css/reset.css" />
   <link rel="stylesheet" href="css/style.css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
