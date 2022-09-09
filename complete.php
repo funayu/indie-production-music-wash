@@ -1,9 +1,27 @@
 <?php
-$name = isset($_POST["name"])? $_POST["name"] : "";
-$email = isset($_POST["email"])? $_POST["email"] : "";
-$inquiry_detail = isset($_POST["inquiry_detail"])? $_POST["inquiry_detail"] : "";
-?>
+mb_language("japanese");
+mb_internal_encoding("UTF-8");
 
+// データ格納
+$to = $_POST["email"];//メール送信先の設定
+$subject = "【MUSIC WASH】お問い合わせありがとうございます";//メールの件名
+$header = "From: info@tdp.com";//送信元アドレス
+$header .= "\n";//改行
+$header .= "Bcc: tiro349@moimoi.re";//確認メール管理者受信用
+//$header .= "Bcc: tdp@sairafactory.com";//確認メール管理者受信用
+$message = "この度はお問い合わせいただきありがとうございます。" . "\n" . "お問い合わせ内容は下記となります。" . "\n" .
+"\n" .
+"お名前：" . $_POST["name"] . "\n" .
+"メールアドレス：" . $_POST["email"] . "\n" .
+"お問い合わせ内容：" . $_POST["inquiry_detail"] . "\n" .
+
+"\n" .
+"※2営業日以内に返信がない場合は、お手数ですがcontact@music-wash.comまでご連絡ください。";
+
+// メール送信
+mb_send_mail($to, $subject, $message, $header);
+
+?>
 <!DOCTYPE html>
 <html>
 
@@ -16,11 +34,14 @@ $inquiry_detail = isset($_POST["inquiry_detail"])? $_POST["inquiry_detail"] : ""
   <title>【MUSIC WASH】お問い合わせフォーム 完了画面</title>
   <link rel="stylesheet" href="css/reset.css" />
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="js/script.js" defer></script>
 </head>
 
-<body class="contact confirm">
+<body class="contact contact-complete">
   <!-- ハンバーガークリックで表示されるレイヤー -->
   <div id="coverlayer"></div>
   <header>
@@ -71,25 +92,15 @@ $inquiry_detail = isset($_POST["inquiry_detail"])? $_POST["inquiry_detail"] : ""
     <article>
       <div class="inner">
         <h2><span>C</span>ONTACT</h2>
-        <form action="complete.php" method="post" id="contact">
-          <!-- input:hiddenの内容 -->
-          <input type="hidden" name="name" value="<?php echo htmlspecialchars($name,ENT_QUOTES,"UTF-8"); ?>">
-          <input type="hidden" name="email" value="<?php echo htmlspecialchars($email,ENT_QUOTES,"UTF-8"); ?>">
-          <input type="hidden" name="inquiry_detail"
-            value="<?php echo htmlspecialchars($inquiry_detail,ENT_QUOTES,"UTF-8"); ?>">
-          <!-- input:hiddenの内容ここまで -->
-          <dl>
-            <dt>お名前</dt>
-            <dd><?php echo htmlspecialchars($name,ENT_QUOTES,"UTF-8"); ?></dd>
-            <dt>メールアドレス</dt>
-            <dd><?php echo htmlspecialchars($email,ENT_QUOTES,"UTF-8"); ?></dd>
-            <dt>お問い合わせ内容</dt>
-            <dd><?php echo htmlspecialchars($inquiry_detail,ENT_QUOTES,"UTF-8"); ?></dd>
-          </dl>
-          <div class="submit_button"><input type="submit" value="送信する" /></div>
-          <div class="back_button">
-            <input type="button" value="戻る" onClick="history.back()">
-          </div>
+        <div class="message">
+          <p>お問い合わせいただきありがとうございます。<br>
+            2営業日以内にご返信させていただきますので<br>
+            今しばらくお待ち下さい。
+          </p>
+        </div>
+        <div class="main_button">
+          <input type="button" value="戻る" onClick="location.href='index.html'">
+        </div>
         </form>
       </div>
       <!-- .innerの修了タグ -->

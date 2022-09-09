@@ -16,11 +16,14 @@ $inquiry_detail = isset($_POST["inquiry_detail"])? $_POST["inquiry_detail"] : ""
   <title>【MUSIC WASH】お問い合わせフォーム 確認画面</title>
   <link rel="stylesheet" href="css/reset.css" />
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="js/script.js" defer></script>
 </head>
 
-<body class="contact confirm">
+<body class="contact contact-confirm">
   <!-- ハンバーガークリックで表示されるレイヤー -->
   <div id="coverlayer"></div>
   <header>
@@ -86,7 +89,7 @@ $inquiry_detail = isset($_POST["inquiry_detail"])? $_POST["inquiry_detail"] : ""
             <dt>お問い合わせ内容</dt>
             <dd><?php echo htmlspecialchars($inquiry_detail,ENT_QUOTES,"UTF-8"); ?></dd>
           </dl>
-          <div class="submit_button"><input type="submit" value="送信する" /></div>
+          <div class="main_button"><input type="submit" value="送信する" /></div>
           <div class="back_button">
             <input type="button" value="戻る" onClick="history.back()">
           </div>

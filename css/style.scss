@@ -784,7 +784,22 @@ footer {
 
 // コンタクトフォーム
 body.contact {
-  // 共通
+  // ボタンの共通スタイル
+  .main_button {
+    text-align: center;
+    input[type='submit'],
+    input[type='button'] {
+      color: $base_white;
+      background-color: $accent_blue_with-white;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      width: 44.393vw;
+      padding: 10px 0;
+      font-weight: bold;
+    }
+  }
+
   main article {
     padding: 60px 0 100px;
     h2 span {
@@ -816,29 +831,16 @@ body.contact {
           }
         }
       }
-      .submit_button {
-        text-align: center;
-        input[type='submit'] {
-          color: $base_white;
-          background-color: $accent_blue_with-white;
-          border: none;
-          border-radius: 3px;
-          cursor: pointer;
-          width: 44.393vw;
-          padding: 10px 0;
-          font-weight: bold;
-        }
-      }
     }
   }
 
   // confirm.php用
-  &.confirm {
+  &-confirm {
     main article form {
       dl {
         margin-bottom: 80px;
       }
-      .submit_button {
+      .main_button {
         margin-bottom: 32.5px;
       }
       .back_button input {
@@ -851,6 +853,13 @@ body.contact {
         font-weight: bold;
       }
     }
+  }
+
+  // complete.php用
+  &-complete .message {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
   }
 }
 
