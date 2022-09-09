@@ -867,6 +867,43 @@ body.contact {
 TAB用
  */
 @media screen and (min-width: 600px) {
+  /* 共通 */
+  .inner {
+    width: 94.005vw;
+  }
+
+  /* メインビジュアル */
+  .top_main {
+    height: 81.535vw;
+    background-image: url(../images/top_main/top_main_tab@1668.jpg);
+
+    .logo {
+      width: 35.252vw;
+      top: 8.993vw;
+    }
+    .date {
+      font-size: 6.715vw;
+      top: 45.5vw;
+      .day {
+        font-size: 3.837vw;
+      }
+    }
+    .time {
+      font-size: 2.998vw;
+      top: 54vw;
+      span {
+        font-size: 2.638vw;
+      }
+    }
+    .place {
+      font-size: 2.998vw;
+      top: 59.952vw;
+    }
+    .message {
+      width: 42.806vw;
+      top: 70.743vw;
+    }
+  }
 }
 /*
 PC用
