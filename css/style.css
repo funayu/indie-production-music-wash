@@ -295,8 +295,14 @@ article#news h2 span {
   color: #4a9ec2;
 }
 article#news dl dt {
-  font-size: 14px;
+  font-size: 16px;
   font-family: "Heebo-Bold";
+}
+article#news dl dd {
+  margin-bottom: 20px;
+}
+article#news dl dd:last-of-type {
+  margin-bottom: 0;
 }
 article#news dl dd a {
   text-decoration: underline;
@@ -808,6 +814,161 @@ TAB用
   .top_main .message {
     width: 42.806vw;
     top: 70.743vw;
+  }
+  /* SNSシェア */
+  .sns_share ul {
+    -moz-column-gap: 3.957vw;
+         column-gap: 3.957vw;
+  }
+  .sns_share ul li {
+    width: 20.983vw;
+  }
+  article {
+    /* article 共通 */
+    /* article:ARTISTS */
+    /* article:TIME TABLE */
+  }
+  article[id] {
+    padding: 80px 0 130px;
+  }
+  article h2 {
+    font-size: 42px;
+    letter-spacing: 0.03em;
+    text-align: left;
+  }
+  article#artists h2 {
+    margin-bottom: 71px;
+  }
+  article#artists section {
+    justify-content: space-between;
+    gap: 0;
+    row-gap: 36px;
+  }
+  article#artists section:first-of-type {
+    margin-bottom: 81px;
+  }
+  article#artists section h3 {
+    font-size: 35px;
+  }
+  article#artists section > div {
+    width: 29.257vw;
+  }
+  article#artists section > div > div {
+    margin-bottom: 2px;
+    padding: 1.199vw 1.559vw;
+  }
+  article#time_table .inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  article#time_table h2 {
+    width: 100%;
+  }
+  article#time_table h2 span {
+    color: #4a9ec2;
+  }
+  article#time_table .date_select {
+    color: #848484;
+    background-color: #d5d5d5;
+    cursor: pointer;
+    font-size: 24px;
+    font-family: "Heebo-Bold";
+    width: 44.159vw;
+    border-radius: 3px;
+    text-align: center;
+    padding: 6px 0;
+  }
+  article#time_table .date_select.is_active {
+    color: #fff;
+    background-color: #000;
+  }
+  article#time_table .date_select span {
+    font-size: 16px;
+    padding-left: 0.3em;
+  }
+  article#time_table .time_table {
+    width: 100%;
+    padding-top: 30px;
+  }
+  article#time_table .time_table .time_table_row {
+    display: flex;
+    height: 60px;
+  }
+  article#time_table .time_table .time_table_row.heading {
+    height: 32px;
+    margin-bottom: 10px;
+  }
+  article#time_table .time_table .time_table_row.heading .stage > div {
+    color: #fff;
+    text-align: center;
+    line-height: 32px;
+    font-family: "Heebo-Bold";
+  }
+  article#time_table .time_table .time_table_row.heading .stage.stage_1 {
+    background-color: #4a9ec2;
+  }
+  article#time_table .time_table .time_table_row.heading .stage.stage_2 {
+    background-color: #cc8262;
+  }
+  article#time_table .time_table .time_table_row:nth-of-type(2) .stage_2 {
+    position: relative;
+  }
+  article#time_table .time_table .time_table_row:nth-of-type(2) .stage_2::after {
+    content: "OPEN 9:30 / START 10:00";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+    /* テキストの折返しをなくす */
+    white-space: nowrap;
+    background-color: #fff;
+    font-size: 14px;
+    padding: 4px 8px;
+  }
+  article#time_table .time_table .time_table_row .time {
+    width: 17.1717171717%;
+    text-align: center;
+    font-size: 14px;
+  }
+  article#time_table .time_table .time_table_row .time > div {
+    transform: translateY(-50%);
+  }
+  article#time_table .time_table .time_table_row .stage {
+    width: 41.4141414141%;
+    position: relative;
+  }
+  article#time_table .time_table .time_table_row .stage .artist_name {
+    padding: 2.5px 0 0 8px;
+    height: 100%;
+    font-family: "Heebo-Bold";
+  }
+  article#time_table .time_table .time_table_row .stage .time_label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-100%);
+    font-size: 12px;
+    padding: 2px 8px;
+    color: #fff;
+  }
+  article#time_table .time_table .time_table_row .stage.stage_1 {
+    background-color: #cfe9f5;
+  }
+  article#time_table .time_table .time_table_row .stage.stage_1 .artist_name {
+    background-color: #52b0d9;
+  }
+  article#time_table .time_table .time_table_row .stage.stage_1 .time_label {
+    background-color: #14465c;
+  }
+  article#time_table .time_table .time_table_row .stage.stage_2 {
+    background-color: #f9dacc;
+  }
+  article#time_table .time_table .time_table_row .stage.stage_2 .artist_name {
+    background-color: #ed9772;
+  }
+  article#time_table .time_table .time_table_row .stage.stage_2 .time_label {
+    background-color: #a13f15;
   }
 }
 /*
