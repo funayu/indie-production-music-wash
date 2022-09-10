@@ -951,6 +951,14 @@ TAB用
     width: 9.353vw;
     height: 5.755vw;
   }
+  footer {
+    padding-top: 80px;
+  }
+  footer .logo img {
+    width: 26.019vw;
+    height: 26.019vw;
+    margin-bottom: 40px;
+  }
 }
 /*
 PC用

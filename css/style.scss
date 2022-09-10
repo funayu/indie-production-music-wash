@@ -771,25 +771,28 @@ article {
   }
 }
 
+// フッター
 footer {
   background: $accent_blue_dark;
   padding: 40px 0 20px;
   text-align: center;
   .logo img {
-    width: 49.533vw;
-    height: 49.533vw;
+    $logo_size: 49.533vw;
+    width: $logo_size;
+    height: $logo_size;
     object-fit: contain;
     margin-bottom: 26px;
   }
   .sns_link {
+    $sns_icon_size: 32px;
     display: flex;
     justify-content: center;
     margin-bottom: 37px;
     div {
       padding: 16px;
       img {
-        width: 32px;
-        height: 32px;
+        width: $sns_icon_size;
+        height: $sns_icon_size;
         object-fit: contain;
       }
     }
@@ -1081,6 +1084,16 @@ TAB用
         width: 9.353vw;
         height: $row_sponsor_height;
       }
+    }
+  }
+  // フッター
+  footer {
+    padding-top: 80px;
+    .logo img {
+      $logo_size: 26.019vw;
+      width: $logo_size;
+      height: $logo_size;
+      margin-bottom: 40px;
     }
   }
 }
