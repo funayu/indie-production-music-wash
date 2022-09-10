@@ -358,10 +358,11 @@ article#time_table h2 {
 article#time_table h2 span {
   color: #4a9ec2;
 }
-article#time_table .date_select {
-  color: #848484;
-  background-color: #d5d5d5;
-  cursor: pointer;
+article#time_table .date_labels {
+  display: none;
+}
+article#time_table .date_select,
+article#time_table .date_label {
   font-size: 24px;
   font-family: "Heebo-Bold";
   width: 44.159vw;
@@ -369,13 +370,19 @@ article#time_table .date_select {
   text-align: center;
   padding: 6px 0;
 }
+article#time_table .date_select span,
+article#time_table .date_label span {
+  font-size: 16px;
+  padding-left: 0.3em;
+}
+article#time_table .date_select {
+  color: #848484;
+  background-color: #d5d5d5;
+  cursor: pointer;
+}
 article#time_table .date_select.is_active {
   color: #fff;
   background-color: #000;
-}
-article#time_table .date_select span {
-  font-size: 16px;
-  padding-left: 0.3em;
 }
 article#time_table .time_table {
   width: 100%;
@@ -857,118 +864,25 @@ TAB用
     margin-bottom: 2px;
     padding: 1.199vw 1.559vw;
   }
-  article#time_table .inner {
+  article#time_table .date_select {
+    display: none;
+  }
+  article#time_table .date_labels {
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
   }
-  article#time_table h2 {
-    width: 100%;
+  article#time_table .date_labels .date_label_outer {
+    width: 45.444vw;
   }
-  article#time_table h2 span {
-    color: #4a9ec2;
-  }
-  article#time_table .date_select {
-    color: #848484;
-    background-color: #d5d5d5;
-    cursor: pointer;
-    font-size: 24px;
-    font-family: "Heebo-Bold";
-    width: 44.159vw;
-    border-radius: 3px;
-    text-align: center;
-    padding: 6px 0;
-  }
-  article#time_table .date_select.is_active {
+  article#time_table .date_labels .date_label_outer .date_label {
+    margin: 0 auto;
     color: #fff;
     background-color: #000;
-  }
-  article#time_table .date_select span {
-    font-size: 16px;
-    padding-left: 0.3em;
+    width: 22.662vw;
   }
   article#time_table .time_table {
-    width: 100%;
-    padding-top: 30px;
-  }
-  article#time_table .time_table .time_table_row {
-    display: flex;
-    height: 60px;
-  }
-  article#time_table .time_table .time_table_row.heading {
-    height: 32px;
-    margin-bottom: 10px;
-  }
-  article#time_table .time_table .time_table_row.heading .stage > div {
-    color: #fff;
-    text-align: center;
-    line-height: 32px;
-    font-family: "Heebo-Bold";
-  }
-  article#time_table .time_table .time_table_row.heading .stage.stage_1 {
-    background-color: #4a9ec2;
-  }
-  article#time_table .time_table .time_table_row.heading .stage.stage_2 {
-    background-color: #cc8262;
-  }
-  article#time_table .time_table .time_table_row:nth-of-type(2) .stage_2 {
-    position: relative;
-  }
-  article#time_table .time_table .time_table_row:nth-of-type(2) .stage_2::after {
-    content: "OPEN 9:30 / START 10:00";
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translate(-50%, -50%);
-    /* テキストの折返しをなくす */
-    white-space: nowrap;
-    background-color: #fff;
-    font-size: 14px;
-    padding: 4px 8px;
-  }
-  article#time_table .time_table .time_table_row .time {
-    width: 17.1717171717%;
-    text-align: center;
-    font-size: 14px;
-  }
-  article#time_table .time_table .time_table_row .time > div {
-    transform: translateY(-50%);
-  }
-  article#time_table .time_table .time_table_row .stage {
-    width: 41.4141414141%;
-    position: relative;
-  }
-  article#time_table .time_table .time_table_row .stage .artist_name {
-    padding: 2.5px 0 0 8px;
-    height: 100%;
-    font-family: "Heebo-Bold";
-  }
-  article#time_table .time_table .time_table_row .stage .time_label {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translateY(-100%);
-    font-size: 12px;
-    padding: 2px 8px;
-    color: #fff;
-  }
-  article#time_table .time_table .time_table_row .stage.stage_1 {
-    background-color: #cfe9f5;
-  }
-  article#time_table .time_table .time_table_row .stage.stage_1 .artist_name {
-    background-color: #52b0d9;
-  }
-  article#time_table .time_table .time_table_row .stage.stage_1 .time_label {
-    background-color: #14465c;
-  }
-  article#time_table .time_table .time_table_row .stage.stage_2 {
-    background-color: #f9dacc;
-  }
-  article#time_table .time_table .time_table_row .stage.stage_2 .artist_name {
-    background-color: #ed9772;
-  }
-  article#time_table .time_table .time_table_row .stage.stage_2 .time_label {
-    background-color: #a13f15;
+    width: 45.444vw;
   }
 }
 /*

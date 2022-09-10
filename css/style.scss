@@ -401,24 +401,29 @@ article {
         color: $accent_blue_with-white;
       }
     }
-    .date_select {
-      color: #848484;
-      background-color: #d5d5d5;
-      cursor: pointer;
+    .date_labels {
+      display: none;
+    }
+    .date_select,
+    .date_label {
       font-size: 24px;
       font-family: 'Heebo-Bold';
       width: 44.159vw;
       border-radius: 3px;
       text-align: center;
       padding: 6px 0;
-
-      &.is_active {
-        color: $base_white;
-        background-color: $main_black;
-      }
       span {
         font-size: 16px;
         padding-left: 0.3em;
+      }
+    }
+    .date_select {
+      color: #848484;
+      background-color: #d5d5d5;
+      cursor: pointer;
+      &.is_active {
+        color: $base_white;
+        background-color: $main_black;
       }
     }
     .time_table {
@@ -959,133 +964,27 @@ TAB用
 
     /* article:TIME TABLE */
     &#time_table {
-      .inner {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-      }
-      h2 {
-        width: 100%;
+      $time_table_width: 45.444vw;
 
-        span {
-          color: $accent_blue_with-white;
-        }
-      }
       .date_select {
-        color: #848484;
-        background-color: #d5d5d5;
-        cursor: pointer;
-        font-size: 24px;
-        font-family: 'Heebo-Bold';
-        width: 44.159vw;
-        border-radius: 3px;
-        text-align: center;
-        padding: 6px 0;
-
-        &.is_active {
-          color: $base_white;
-          background-color: $main_black;
-        }
-        span {
-          font-size: 16px;
-          padding-left: 0.3em;
+        display: none;
+      }
+      .date_labels {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        .date_label_outer {
+          width: $time_table_width;
+          .date_label {
+            margin: 0 auto;
+            color: $base_white;
+            background-color: $main_black;
+            width: 22.662vw;
+          }
         }
       }
       .time_table {
-        width: 100%;
-        padding-top: 30px;
-
-        .time_table_row {
-          display: flex;
-          height: 60px;
-
-          &.heading {
-            height: 32px;
-            margin-bottom: 10px;
-
-            .stage {
-              > div {
-                color: $base_white;
-                text-align: center;
-                line-height: 32px;
-                font-family: 'Heebo-Bold';
-              }
-              &.stage_1 {
-                background-color: $accent_blue_with-white;
-              }
-              &.stage_2 {
-                background-color: $accent_orange_with-white;
-              }
-            }
-          }
-
-          &:nth-of-type(2) .stage_2 {
-            position: relative;
-
-            &::after {
-              content: 'OPEN 9:30 / START 10:00';
-              position: absolute;
-              top: 50%;
-              left: 0;
-              transform: translate(-50%, -50%);
-              /* テキストの折返しをなくす */
-              white-space: nowrap;
-              background-color: $base_white;
-              font-size: 14px;
-              padding: 4px 8px;
-            }
-          }
-
-          .time {
-            width: calc((68 / 396) * 100%);
-            text-align: center;
-            font-size: 14px;
-
-            > div {
-              transform: translateY(-50%);
-            }
-          }
-
-          .stage {
-            width: calc((164 / 396) * 100%);
-            position: relative;
-
-            .artist_name {
-              padding: 2.5px 0 0 8px;
-              height: 100%;
-              font-family: 'Heebo-Bold';
-            }
-            .time_label {
-              position: absolute;
-              top: 0;
-              left: 0;
-              transform: translateY(-100%);
-              font-size: 12px;
-              padding: 2px 8px;
-              color: $base_white;
-            }
-            &.stage_1 {
-              background-color: $accent_blue_light;
-
-              .artist_name {
-                background-color: $accent_blue;
-              }
-              .time_label {
-                background-color: $accent_blue_dark;
-              }
-            }
-            &.stage_2 {
-              background-color: $accent_orange_light;
-
-              .artist_name {
-                background-color: $accent_orange;
-              }
-              .time_label {
-                background-color: $accent_orange_dark;
-              }
-            }
-          }
-        }
+        width: $time_table_width;
       }
     }
   }
