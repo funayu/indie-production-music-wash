@@ -687,13 +687,10 @@ article {
   &#access {
     h2 {
       span {
-        color: $accent_blue_with-white;
+        color: $accent_orange_with-white;
       }
     }
-    section {
-      &:first-of-type {
-        margin-bottom: 24px;
-      }
+    section.place {
       h3 {
         font-size: 22px;
         font-weight: bold;
@@ -708,7 +705,10 @@ article {
         height: 75vw;
         margin-bottom: 40px;
       }
-      section {
+      section.traffic_access {
+        &:first-of-type {
+          margin-bottom: 24px;
+        }
         h4 {
           font-weight: bold;
         }
@@ -1052,6 +1052,18 @@ TAB用
           &-image {
             height: $goods_image_size;
           }
+        }
+      }
+    }
+    // article:ACCESS
+    &#access {
+      section.place {
+        h3 {
+          font-size: 28px;
+          text-align: left;
+        }
+        iframe.map {
+          height: 50vw;
         }
       }
     }

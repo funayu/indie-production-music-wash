@@ -613,32 +613,32 @@ article#goods .goods_outer .goods-size {
   padding-bottom: 4px;
 }
 article#access h2 span {
-  color: #4a9ec2;
+  color: #cc8262;
 }
-article#access section:first-of-type {
-  margin-bottom: 24px;
-}
-article#access section h3 {
+article#access section.place h3 {
   font-size: 22px;
   font-weight: bold;
   text-align: center;
   margin-bottom: 10px;
 }
-article#access section p.address {
+article#access section.place p.address {
   margin-bottom: 20px;
 }
-article#access section iframe.map {
+article#access section.place iframe.map {
   width: 100%;
   height: 75vw;
   margin-bottom: 40px;
 }
-article#access section section h4 {
-  font-weight: bold;
-}
-article#access section section p {
+article#access section.place section.traffic_access:first-of-type {
   margin-bottom: 24px;
 }
-article#access section section p:last-of-type {
+article#access section.place section.traffic_access h4 {
+  font-weight: bold;
+}
+article#access section.place section.traffic_access p {
+  margin-bottom: 24px;
+}
+article#access section.place section.traffic_access p:last-of-type {
   margin-bottom: 0;
 }
 
@@ -930,6 +930,13 @@ TAB用
   }
   article#goods .goods_outer .goods-image {
     height: 29.376498801vw;
+  }
+  article#access section.place h3 {
+    font-size: 28px;
+    text-align: left;
+  }
+  article#access section.place iframe.map {
+    height: 50vw;
   }
 }
 /*
