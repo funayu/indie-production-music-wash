@@ -985,6 +985,24 @@ body.contact .main_button input[type=button] {
     width: 62.5348189415%;
     margin-bottom: 0;
   }
+  body.contact-confirm main article form dl {
+    margin-bottom: 98px;
+  }
+  body.contact-confirm main article form .main_button {
+    margin-bottom: 30px;
+  }
+  body.contact-confirm main article form .back_button input {
+    width: 8.153vw;
+  }
+  body.contact-complete main article {
+    padding: 80px 0 321px;
+  }
+  body.contact-complete main article h2 {
+    margin-bottom: 60px;
+  }
+  body.contact-complete main article .message {
+    justify-content: left;
+  }
 }
 /*
 PC用

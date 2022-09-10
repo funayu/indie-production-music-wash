@@ -1131,6 +1131,34 @@ TAB用
         }
       }
     }
+
+    // confirm.php用
+    &-confirm {
+      main article form {
+        dl {
+          margin-bottom: 98px;
+        }
+        .main_button {
+          margin-bottom: 30px;
+        }
+        .back_button input {
+          width: 8.153vw;
+        }
+      }
+    }
+
+    // complete.php用
+    &-complete {
+      main article {
+        padding: 80px 0 321px;
+        h2 {
+          margin-bottom: 60px;
+        }
+        .message {
+          justify-content: left;
+        }
+      }
+    }
   }
 }
 

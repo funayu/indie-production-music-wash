@@ -94,7 +94,7 @@ mb_send_mail($to, $subject, $message, $header);
         <h2><span>C</span>ONTACT</h2>
         <div class="message">
           <p>お問い合わせいただきありがとうございます。<br>
-            2営業日以内にご返信させていただきますので<br>
+            2営業日以内にご返信させていただきますので<br class="sp">
             今しばらくお待ち下さい。
           </p>
         </div>
