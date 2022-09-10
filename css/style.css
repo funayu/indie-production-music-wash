@@ -98,7 +98,6 @@ nav ul li img {
 nav ul li a {
   color: #000;
   font-size: 24px;
-  font-weight: 500;
   display: block;
 }
 nav + .sns_link {
@@ -1134,5 +1133,70 @@ body.contact .main_button input[type=button] {
   }
   body.contact-complete main article {
     padding: 80px 0 195px;
+  }
+}
+@media screen and (min-width: 1179px) {
+  body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  aside {
+    width: 17.048346056%;
+    padding: 35px 15px 0;
+  }
+  .top_main,
+.sns_share,
+main {
+    width: 82.951653944%;
+  }
+  footer {
+    width: 100%;
+  }
+  header {
+    height: auto;
+  }
+  header .btnHamburger {
+    display: none;
+  }
+  header h1 {
+    width: 171px;
+    position: static;
+    transform: translateX(0);
+    margin: 0 auto 35px;
+  }
+  header a.btnTicket {
+    display: none;
+  }
+  .drawer_menu {
+    position: static;
+    opacity: 1;
+    transition: 0;
+  }
+  nav {
+    margin-bottom: 55px;
+  }
+  nav ul li {
+    margin-bottom: 20px;
+  }
+  nav ul li img {
+    width: 24px;
+    height: 24px;
+    padding-right: 10px;
+  }
+  nav ul li a {
+    font-size: 20px;
+  }
+  nav + .sns_link {
+    display: flex;
+    width: 158px;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+  nav + .sns_link img {
+    width: 32px;
+    height: 32px;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
 }/*# sourceMappingURL=style.css.map */
