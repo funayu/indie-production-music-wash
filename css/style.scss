@@ -1335,4 +1335,46 @@ PC用
       height: $logo_size;
     }
   }
+
+  // コンタクトフォーム
+  body.contact {
+    // ボタンの共通スタイル
+    .main_button {
+      input[type='submit'],
+      input[type='button'] {
+        width: 230px;
+        font-size: 21px;
+      }
+    }
+    main article {
+      form {
+        width: 732px;
+        dl {
+          $input_field_width: calc((482 / 732) * 100%);
+          dt {
+            width: calc(100% - $input_field_width);
+          }
+          dd {
+            width: $input_field_width;
+          }
+        }
+      }
+    }
+
+    // confirm.php用
+    &-confirm {
+      main article form {
+        .back_button input {
+          width: 66px;
+        }
+      }
+    }
+
+    // complete.php用
+    &-complete {
+      main article {
+        padding: 80px 0 195px;
+      }
+    }
+  }
 }
