@@ -1070,6 +1070,7 @@ TAB用
         }
       }
     }
+
     // article:ACCESS
     &#access {
       section.place {
@@ -1224,6 +1225,114 @@ PC用
     .message {
       width: $message_size;
       top: $message_position;
+    }
+  }
+
+  .sns_share {
+    ul {
+      column-gap: 33px;
+      li {
+        width: 175px;
+      }
+    }
+  }
+
+  article {
+    /* article 共通 */
+    h2 {
+      margin-bottom: 40px;
+    }
+
+    /* article:ARTISTS */
+    &#artists {
+      section {
+        > div {
+          width: 230px;
+          > div {
+            padding: 10px 13px;
+          }
+        }
+      }
+    }
+
+    /* article:TIME TABLE */
+    &#time_table {
+      $time_table_width: 415.5px;
+
+      .date_labels {
+        .date_label_outer {
+          width: $time_table_width;
+          .date_label {
+            width: 189px;
+          }
+        }
+      }
+      .time_table {
+        width: $time_table_width;
+      }
+    }
+
+    // article:TICKET
+    &#ticket {
+      .tickets {
+        row-gap: 0;
+        section.ticket {
+          width: 312px;
+        }
+      }
+      .buy_ticket ul li a {
+        width: 479px;
+      }
+    }
+
+    // article:GOODS
+    &#goods {
+      $goods_image_size: 229px;
+      .goods_outer {
+        &::after {
+          display: none;
+        }
+        .goods {
+          width: $goods_image_size;
+          &-image {
+            height: $goods_image_size;
+          }
+        }
+      }
+    }
+
+    // article:ACCESS
+    &#access {
+      section.place {
+        iframe.map {
+          height: 417px;
+        }
+      }
+    }
+  }
+
+  .outline {
+    &::before {
+      width: 978px;
+    }
+    dl {
+      $row_sponsor_height: 42px;
+      dt.sponsor {
+        height: $row_sponsor_height;
+      }
+      dd.sponsor img {
+        width: 78px;
+        height: $row_sponsor_height;
+      }
+    }
+  }
+
+  // フッター
+  footer {
+    .logo img {
+      $logo_size: 226px;
+      width: $logo_size;
+      height: $logo_size;
     }
   }
 }

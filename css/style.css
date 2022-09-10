@@ -1050,4 +1050,69 @@ PC用
     width: 32.873vw;
     top: 55.341vw;
   }
+  .sns_share ul {
+    -moz-column-gap: 33px;
+         column-gap: 33px;
+  }
+  .sns_share ul li {
+    width: 175px;
+  }
+  article {
+    /* article 共通 */
+    /* article:ARTISTS */
+    /* article:TIME TABLE */
+  }
+  article h2 {
+    margin-bottom: 40px;
+  }
+  article#artists section > div {
+    width: 230px;
+  }
+  article#artists section > div > div {
+    padding: 10px 13px;
+  }
+  article#time_table .date_labels .date_label_outer {
+    width: 415.5px;
+  }
+  article#time_table .date_labels .date_label_outer .date_label {
+    width: 189px;
+  }
+  article#time_table .time_table {
+    width: 415.5px;
+  }
+  article#ticket .tickets {
+    row-gap: 0;
+  }
+  article#ticket .tickets section.ticket {
+    width: 312px;
+  }
+  article#ticket .buy_ticket ul li a {
+    width: 479px;
+  }
+  article#goods .goods_outer::after {
+    display: none;
+  }
+  article#goods .goods_outer .goods {
+    width: 229px;
+  }
+  article#goods .goods_outer .goods-image {
+    height: 229px;
+  }
+  article#access section.place iframe.map {
+    height: 417px;
+  }
+  .outline::before {
+    width: 978px;
+  }
+  .outline dl dt.sponsor {
+    height: 42px;
+  }
+  .outline dl dd.sponsor img {
+    width: 78px;
+    height: 42px;
+  }
+  footer .logo img {
+    width: 226px;
+    height: 226px;
+  }
 }/*# sourceMappingURL=style.css.map */
