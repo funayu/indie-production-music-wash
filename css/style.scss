@@ -744,13 +744,14 @@ article {
     }
   }
   dl {
+    $row_sponsor_height: 11.215vw;
     font-size: 13px;
     display: flex;
     flex-wrap: wrap;
     dt {
-      width: calc((63 / 391) * 100%);
+      width: 6em;
       &.sponsor {
-        height: 11.215vw;
+        height: $row_sponsor_height;
         position: relative;
         div {
           position: absolute;
@@ -760,10 +761,10 @@ article {
       }
     }
     dd {
-      width: calc((328 / 391) * 100%);
+      width: calc(100% - 6em);
       &.sponsor img {
         width: 18.224vw;
-        height: 11.215vw;
+        height: $row_sponsor_height;
         object-fit: contain;
       }
     }
@@ -1034,11 +1035,9 @@ TAB用
     // article:GOODS
     &#goods {
       $goods_image_size: calc((245 / 834) * 100vw);
-      h2 {
-        &::after {
-          left: 0%;
-          transform: translate(0, -100%);
-        }
+      h2::after {
+        left: 0%;
+        transform: translate(0, -100%);
       }
       .goods_outer {
         // 最終行を左寄せにするための記述
@@ -1068,7 +1067,24 @@ TAB用
       }
     }
   }
+  .outline {
+    padding: 80px 0 130px;
+    &::before {
+      width: 94.005vw;
+    }
+    dl {
+      $row_sponsor_height: 5.755vw;
+      dt.sponsor {
+        height: $row_sponsor_height;
+      }
+      dd.sponsor img {
+        width: 9.353vw;
+        height: $row_sponsor_height;
+      }
+    }
+  }
 }
+
 /*
 PC用
 */

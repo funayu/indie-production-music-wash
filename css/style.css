@@ -669,7 +669,7 @@ article#access section.place section.traffic_access p:last-of-type {
   flex-wrap: wrap;
 }
 .outline dl dt {
-  width: 16.1125319693%;
+  width: 6em;
 }
 .outline dl dt.sponsor {
   height: 11.215vw;
@@ -681,7 +681,7 @@ article#access section.place section.traffic_access p:last-of-type {
   bottom: 0;
 }
 .outline dl dd {
-  width: 83.8874680307%;
+  width: calc(100% - 6em);
 }
 .outline dl dd.sponsor img {
   width: 18.224vw;
@@ -937,6 +937,19 @@ TAB用
   }
   article#access section.place iframe.map {
     height: 50vw;
+  }
+  .outline {
+    padding: 80px 0 130px;
+  }
+  .outline::before {
+    width: 94.005vw;
+  }
+  .outline dl dt.sponsor {
+    height: 5.755vw;
+  }
+  .outline dl dd.sponsor img {
+    width: 9.353vw;
+    height: 5.755vw;
   }
 }
 /*
