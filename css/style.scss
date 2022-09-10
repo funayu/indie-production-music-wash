@@ -15,6 +15,19 @@ $accent_blue_with-white: #4a9ec2;
 $accent_orange_with-white: #cc8262;
 // 日本語フォントのベース
 $base_ja_font: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', Meiryo, 'sans-serif';
+// メインビジュアル上の文字（PC用）
+$logo_size: 27.072vw;
+$logo_position: 7.551vw;
+$date_size: 5.157vw;
+$date_day_size: 2.947vw;
+$date_position: 35.5vw;
+$time_size: 2.302vw;
+$time_label_size: 2.026vw;
+$time_position: 41.5vw;
+$place_size: 2.302vw;
+$place_position: 46.869vw;
+$message_size: 32.873vw;
+$message_position: 55.341vw;
 
 /* 共通 */
 @font-face {
@@ -1165,5 +1178,52 @@ TAB用
 /*
 PC用
 */
-@media screen and (min-width: 980px) {
+@media screen and (min-width: 978px) {
+  /* 共通 */
+  .inner {
+    width: 978px;
+  }
+
+  header {
+    .inner {
+      width: 95%;
+    }
+  }
+
+  /* メインビジュアル */
+  .top_main {
+    width: 100%;
+    height: 0;
+    padding-top: calc((680 / 1086) * 100%);
+    background-size: cover;
+    background-position: center center;
+    background-image: url(../images/top_main/top_main_pc@1600.jpg);
+
+    .logo {
+      width: $logo_size;
+      top: $logo_position;
+    }
+    .date {
+      font-size: $date_size;
+      top: $date_position;
+      .day {
+        font-size: $date_day_size;
+      }
+    }
+    .time {
+      font-size: $time_label_size;
+      top: $time_position;
+      span {
+        font-size: $time_size;
+      }
+    }
+    .place {
+      font-size: $place_size;
+      top: $place_position;
+    }
+    .message {
+      width: $message_size;
+      top: $message_position;
+    }
+  }
 }

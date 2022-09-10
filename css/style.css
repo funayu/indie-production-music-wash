@@ -1006,4 +1006,48 @@ body.contact .main_button input[type=button] {
 }
 /*
 PC用
-*//*# sourceMappingURL=style.css.map */
+*/
+@media screen and (min-width: 978px) {
+  /* 共通 */
+  .inner {
+    width: 978px;
+  }
+  header .inner {
+    width: 95%;
+  }
+  /* メインビジュアル */
+  .top_main {
+    width: 100%;
+    height: 0;
+    padding-top: 62.6151012891%;
+    background-size: cover;
+    background-position: center center;
+    background-image: url(../images/top_main/top_main_pc@1600.jpg);
+  }
+  .top_main .logo {
+    width: 27.072vw;
+    top: 7.551vw;
+  }
+  .top_main .date {
+    font-size: 5.157vw;
+    top: 35.5vw;
+  }
+  .top_main .date .day {
+    font-size: 2.947vw;
+  }
+  .top_main .time {
+    font-size: 2.026vw;
+    top: 41.5vw;
+  }
+  .top_main .time span {
+    font-size: 2.302vw;
+  }
+  .top_main .place {
+    font-size: 2.302vw;
+    top: 46.869vw;
+  }
+  .top_main .message {
+    width: 32.873vw;
+    top: 55.341vw;
+  }
+}/*# sourceMappingURL=style.css.map */
