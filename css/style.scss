@@ -1096,6 +1096,42 @@ TAB用
       margin-bottom: 40px;
     }
   }
+
+  // コンタクトフォーム
+  body.contact {
+    // ボタンの共通スタイル
+    .main_button {
+      input[type='submit'],
+      input[type='button'] {
+        width: 21.583vw;
+        padding: 10px 0;
+        font-size: 18px;
+      }
+    }
+
+    main article {
+      padding: 80px 0 130px;
+      form {
+        width: 86.091vw;
+        dl {
+          margin-bottom: 40px;
+          display: flex;
+          flex-wrap: wrap;
+          row-gap: 30px;
+
+          $input_field_width: calc((449 / 718) * 100%);
+          dt {
+            width: calc(100% - $input_field_width);
+            margin-bottom: 0;
+          }
+          dd {
+            width: $input_field_width;
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
 }
 
 /*

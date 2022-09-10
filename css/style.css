@@ -959,6 +959,32 @@ TAB用
     height: 26.019vw;
     margin-bottom: 40px;
   }
+  body.contact .main_button input[type=submit],
+body.contact .main_button input[type=button] {
+    width: 21.583vw;
+    padding: 10px 0;
+    font-size: 18px;
+  }
+  body.contact main article {
+    padding: 80px 0 130px;
+  }
+  body.contact main article form {
+    width: 86.091vw;
+  }
+  body.contact main article form dl {
+    margin-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 30px;
+  }
+  body.contact main article form dl dt {
+    width: 37.4651810585%;
+    margin-bottom: 0;
+  }
+  body.contact main article form dl dd {
+    width: 62.5348189415%;
+    margin-bottom: 0;
+  }
 }
 /*
 PC用
