@@ -77,7 +77,8 @@ textarea {
   width: 92.523vw;
   margin: 0 auto;
 }
-/* ドロワーメニュー */
+
+/* ドロワーメニューの背景 */
 #coverlayer {
   width: 1px;
   background: $base_white;
@@ -87,25 +88,93 @@ textarea {
   bottom: 0;
   opacity: 0;
   transition: 0.5s;
+  z-index: 1;
+
+  // ハンバーガーボタンクリック後
+  &.is-active {
+    /* 幅を1px→100%に変化させつつ、非表示から表示へ */
+    width: 100%;
+    opacity: 0.93;
+  }
 }
+
+// ハンバーガーボタン
+.btnHamburger {
+  position: fixed;
+  top: 13px;
+  left: 17px;
+  width: 30px; /* クリックエリアの横幅*/
+  height: 20px; /* クリックエリアの高さ*/
+  cursor: pointer;
+  z-index: 1;
+
+  .line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 27px; /* 横幅 */
+    height: 4px; /* 1本辺りの高さ */
+    background: $main_black; /* 線の色 */
+    transition: 0.3s;
+  }
+  .line_01 {
+    top: 0;
+  }
+  .line_02 {
+    top: 8px;
+  }
+  .line_03 {
+    top: 16px;
+  }
+
+  /*ハンバーガーボタンクリック後*/
+  &.is-active {
+    .line_01 {
+      top: 8px; /* 上から2番目の線の位置に変更 */
+      /* 線を45度回転 */
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+    .line_02 {
+      opacity: 0; /* 不透明度を下げて線を消す */
+    }
+    .line_03 {
+      top: 8px; /* 上から2番目の線の位置に変更 */
+      /* 線を135度回転 */
+      -webkit-transform: rotate(135deg);
+      transform: rotate(135deg);
+    }
+  }
+}
+
+// ドロワーメニュー
 .drawer_menu {
   position: fixed;
-  top: 101px;
+  top: 50px;
+  z-index: 1;
   /* 幅の分左にずらした状態で非表示 */
   left: -171px;
   width: 171px;
   opacity: 0;
   transition: 0.5s;
+
+  // ハンバーガーメニュークリック後
+  &.is-active {
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 1;
+  }
 }
 
 // ナビゲーション
 nav {
-  margin-bottom: 60px;
+  margin-bottom: 50px;
   ul {
     li {
       display: flex;
       align-items: center;
-      margin-bottom: 34px;
+      margin-bottom: 22px;
 
       &:last-of-type {
         margin-bottom: 0;
@@ -147,35 +216,6 @@ header {
     position: relative;
   }
 
-  .btnHamburger {
-    /* TODO:クリック後はfixedにする */
-    position: absolute;
-    top: 13px;
-    left: 0;
-    width: 30px; /* クリックエリアの横幅*/
-    height: 20px; /* クリックエリアの高さ*/
-    cursor: pointer;
-
-    .line {
-      position: absolute;
-      top: 0;
-      left: 0;
-      display: block;
-      width: 27px; /* 横幅 */
-      height: 4px; /* 1本辺りの高さ */
-      background: $main_black; /* 線の色 */
-      transition: 0.3s;
-    }
-    .line_01 {
-      top: 0;
-    }
-    .line_02 {
-      top: 8px;
-    }
-    .line_03 {
-      top: 16px;
-    }
-  }
   h1 {
     width: 144px;
     position: absolute;

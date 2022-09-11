@@ -55,7 +55,7 @@ textarea {
   margin: 0 auto;
 }
 
-/* ドロワーメニュー */
+/* ドロワーメニューの背景 */
 #coverlayer {
   width: 1px;
   background: #fff;
@@ -65,25 +65,80 @@ textarea {
   bottom: 0;
   opacity: 0;
   transition: 0.5s;
+  z-index: 1;
+}
+#coverlayer.is-active {
+  /* 幅を1px→100%に変化させつつ、非表示から表示へ */
+  width: 100%;
+  opacity: 0.93;
+}
+
+.btnHamburger {
+  position: fixed;
+  top: 13px;
+  left: 17px;
+  width: 30px; /* クリックエリアの横幅*/
+  height: 20px; /* クリックエリアの高さ*/
+  cursor: pointer;
+  z-index: 1;
+  /*ハンバーガーボタンクリック後*/
+}
+.btnHamburger .line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 27px; /* 横幅 */
+  height: 4px; /* 1本辺りの高さ */
+  background: #000; /* 線の色 */
+  transition: 0.3s;
+}
+.btnHamburger .line_01 {
+  top: 0;
+}
+.btnHamburger .line_02 {
+  top: 8px;
+}
+.btnHamburger .line_03 {
+  top: 16px;
+}
+.btnHamburger.is-active .line_01 {
+  top: 8px; /* 上から2番目の線の位置に変更 */
+  /* 線を45度回転 */
+  transform: rotate(45deg);
+}
+.btnHamburger.is-active .line_02 {
+  opacity: 0; /* 不透明度を下げて線を消す */
+}
+.btnHamburger.is-active .line_03 {
+  top: 8px; /* 上から2番目の線の位置に変更 */
+  /* 線を135度回転 */
+  transform: rotate(135deg);
 }
 
 .drawer_menu {
   position: fixed;
-  top: 101px;
+  top: 50px;
+  z-index: 1;
   /* 幅の分左にずらした状態で非表示 */
   left: -171px;
   width: 171px;
   opacity: 0;
   transition: 0.5s;
 }
+.drawer_menu.is-active {
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 1;
+}
 
 nav {
-  margin-bottom: 60px;
+  margin-bottom: 50px;
 }
 nav ul li {
   display: flex;
   align-items: center;
-  margin-bottom: 34px;
+  margin-bottom: 22px;
 }
 nav ul li:last-of-type {
   margin-bottom: 0;
@@ -121,34 +176,6 @@ header .inner {
   height: 100%;
   margin: 0 auto;
   position: relative;
-}
-header .btnHamburger {
-  /* TODO:クリック後はfixedにする */
-  position: absolute;
-  top: 13px;
-  left: 0;
-  width: 30px; /* クリックエリアの横幅*/
-  height: 20px; /* クリックエリアの高さ*/
-  cursor: pointer;
-}
-header .btnHamburger .line {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  width: 27px; /* 横幅 */
-  height: 4px; /* 1本辺りの高さ */
-  background: #000; /* 線の色 */
-  transition: 0.3s;
-}
-header .btnHamburger .line_01 {
-  top: 0;
-}
-header .btnHamburger .line_02 {
-  top: 8px;
-}
-header .btnHamburger .line_03 {
-  top: 16px;
 }
 header h1 {
   width: 144px;
