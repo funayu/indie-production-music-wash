@@ -210,6 +210,16 @@ nav {
 /* ヘッダー */
 header {
   height: 48px;
+  transition: all 0.5s;
+  // ヘッダー固定
+  &.fixed {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: $base_white;
+  }
 
   .inner {
     height: 100%;

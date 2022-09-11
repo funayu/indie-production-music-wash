@@ -174,6 +174,15 @@ nav + .sns_link img {
 /* ヘッダー */
 header {
   height: 48px;
+  transition: all 0.5s;
+}
+header.fixed {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: #fff;
 }
 header .inner {
   height: 100%;
