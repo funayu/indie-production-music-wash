@@ -1144,6 +1144,9 @@ body.contact .main_button input[type=button] {
   aside {
     width: 17.048346056%;
     padding: 35px 15px 0;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
   }
   .top_main,
 .sns_share,
@@ -1188,15 +1191,7 @@ main {
     font-size: 20px;
   }
   nav + .sns_link {
-    display: flex;
-    width: 158px;
-    justify-content: space-between;
-    margin: 0 auto;
-  }
-  nav + .sns_link img {
-    width: 32px;
-    height: 32px;
-    -o-object-fit: contain;
-       object-fit: contain;
+    width: 140px;
+    margin: 0;
   }
 }/*# sourceMappingURL=style.css.map */

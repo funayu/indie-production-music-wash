@@ -1389,6 +1389,8 @@ PC用
   aside {
     width: $aside_width;
     padding: 35px 15px 0;
+    position: sticky;
+    top: 0;
   }
   .top_main,
   .sns_share,
@@ -1415,12 +1417,12 @@ PC用
     }
   }
 
+  // 非表示のnav, sns_linkを表示する
   .drawer_menu {
     position: static;
     opacity: 1;
     transition: 0;
   }
-  // ナビゲーション
   nav {
     margin-bottom: 55px;
     ul {
@@ -1437,16 +1439,8 @@ PC用
       }
     }
     + .sns_link {
-      display: flex;
-      width: 158px;
-      justify-content: space-between;
-      margin: 0 auto;
-
-      img {
-        width: 32px;
-        height: 32px;
-        object-fit: contain;
-      }
+      width: 140px;
+      margin: 0;
     }
   }
 }
