@@ -826,6 +826,9 @@ TAB用
   .inner {
     width: 94.005vw;
   }
+  .drawer_menu {
+    top: 100px;
+  }
   /* メインビジュアル */
   .top_main {
     height: 81.535vw;
@@ -1187,11 +1190,11 @@ main,
 footer {
     width: 82.951653944%;
   }
+  .btnHamburger {
+    display: none;
+  }
   header {
     height: auto;
-  }
-  header .btnHamburger {
-    display: none;
   }
   header h1 {
     width: 171px;

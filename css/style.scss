@@ -949,6 +949,10 @@ TAB用
     width: 94.005vw;
   }
 
+  // ドロワーメニュー
+  .drawer_menu {
+    top: 100px;
+  }
   /* メインビジュアル */
   .top_main {
     height: 81.535vw;
@@ -1445,12 +1449,11 @@ PC用
   footer {
     width: $contents_width;
   }
-
+  .btnHamburger {
+    display: none;
+  }
   header {
     height: auto;
-    .btnHamburger {
-      display: none;
-    }
     h1 {
       width: 171px;
       position: static;
