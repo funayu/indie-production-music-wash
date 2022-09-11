@@ -69,4 +69,68 @@ $(function () {
     // トップへ戻るボタンを押した時のボタンちらつき防止
     return false
   })
+
+  //
+  // トップへ戻るボタンの表示位置タイミング・位置調整
+  //
+  const totop = $('.to_top')
+  $(window).scroll(function () {
+    // スクロールしたら出す
+    if ($(this).scrollTop() > 100) {
+      totop.fadeIn()
+    } else {
+      totop.fadeOut()
+    }
+
+    // フッターの上で止まる
+    const documentHeight = $(document).height() //ドキュメントの高さ
+    const scrollPosition = $(window).height() + $(window).scrollTop() //現在地
+    const footHeight = $('footer').innerHeight() //footerの高さ（＝止めたい位置）
+
+    //ドキュメントの高さと現在地の差がfooterの高さ以下になったら
+    if (documentHeight - scrollPosition <= footHeight) {
+      totop.css({
+        position: 'absolute', //positionをabsolute（親：wrapperからの絶対値）に変更
+        bottom: footHeight + 20, //下からfooterの高さ + 20px上げた位置に配置
+      })
+    } else {
+      totop.css({
+        position: 'fixed', //固定表示
+        bottom: '10px', //下から20px上げた位置に
+      })
+    }
+  })
+
+  //
+  // サイドバーをフッターの手前で止める
+  //
+  if (window.matchMedia('(min-width: 1179px)').matches) {
+    const aside = $('aside')
+    $(window).scroll(function () {
+      // スクロール位置の座標
+      const scrollPosition = $(window).scrollTop()
+      // asideの高さ
+      const asideHeight = aside.innerHeight()
+      const footer = $('footer')
+      // footerの最上部の座標
+      const footerPosition = footer.offset().top
+      // footerの高さ
+      const footerHeight = footer.innerHeight()
+      // スクロール位置の座標+asideの高さがfooter最上部の座標より大きくなったら
+      if (scrollPosition + asideHeight >= footerPosition) {
+        // サイドバーの下位置をフッターの最上部の座標にする
+        aside.css({
+          position: 'absolute',
+          bottom: footerHeight,
+          top: 'auto',
+        })
+      } else {
+        aside.css({
+          position: 'fixed', //固定表示
+          top: '0',
+          bottom: 'auto',
+        })
+      }
+    })
+  }
 })

@@ -118,6 +118,9 @@ $inquiry_detail = isset($_POST["inquiry_detail"])? $_POST["inquiry_detail"] : ""
     </div>
     <small>Copyright &copy; MUSIC WASH FESTIVAL</small>
   </footer>
+  <div class="to_top">
+    <a href="#"></a>
+  </div>
 </body>
 
 </html>

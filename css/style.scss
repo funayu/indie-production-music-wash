@@ -51,6 +51,7 @@ body {
   background: $base_white;
   line-height: 1.5;
   font-family: 'Heebo', $base_ja_font;
+  position: relative;
 }
 img {
   vertical-align: bottom;
@@ -874,6 +875,33 @@ footer {
   }
 }
 
+// 上へ戻るボタン
+.to_top {
+  width: 40px;
+  line-height: 40px;
+  height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: $base_white;
+  position: fixed;
+  z-index: 1;
+  bottom: 10px;
+  right: 10px;
+  border: 3px solid $main_black;
+  box-sizing: content-box;
+  /* 初期表示の際は非表示にする */
+  display: none;
+  a {
+    display: block;
+    &::before {
+      content: '\f077';
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      font-size: 20px;
+    }
+  }
+}
+
 // コンタクトフォーム
 body.contact {
   // ボタンの共通スタイル
@@ -1462,7 +1490,7 @@ PC用
   $contents_width: calc(100% - $aside_width);
   aside {
     width: $aside_width;
-    padding: 35px 15px 0;
+    padding: 35px 15px 20px;
     position: fixed;
     top: 0;
     left: 0;
@@ -1470,9 +1498,11 @@ PC用
   }
   .top_main,
   .sns_share,
-  main,
-  footer {
+  main {
     width: $contents_width;
+  }
+  footer {
+    width: 100%;
   }
   .btnHamburger {
     display: none;

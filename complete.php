@@ -126,6 +126,9 @@ mb_send_mail($to, $subject, $message, $header);
     </div>
     <small>Copyright &copy; MUSIC WASH FESTIVAL</small>
   </footer>
+  <div class="to_top">
+    <a href="#"></a>
+  </div>
 </body>
 
 </html>
