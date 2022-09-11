@@ -18,6 +18,8 @@ $(function () {
   const header = $('header')
   const headerHeight = header.height()
 
+  const btnHamburger = $('.btnHamburger')
+
   // ヘッダー固定開始位置の要素
   const target = $('#news')
   const targetPosition = target.offset().top
@@ -34,9 +36,11 @@ $(function () {
 
       if (scrollPosition >= targetPosition) {
         header.addClass('fixed')
+        btnHamburger.addClass('header-fixed')
         target.css('padding-top', targetPaddingTopHeaderFixed)
       } else {
         header.removeClass('fixed')
+        btnHamburger.removeClass('header-fixed')
         target.css('padding-top', targetPaddingTop)
       }
     }

@@ -88,7 +88,7 @@ textarea {
   bottom: 0;
   opacity: 0;
   transition: 0.5s;
-  z-index: 1;
+  z-index: 2;
 
   // ハンバーガーボタンクリック後
   &.is-active {
@@ -102,10 +102,11 @@ textarea {
 .btnHamburger {
   position: absolute;
   top: 13px;
+  left: 3.972vw;
   width: 30px; /* クリックエリアの横幅*/
   height: 20px; /* クリックエリアの高さ*/
   cursor: pointer;
-  z-index: 1;
+  z-index: 2;
 
   .line {
     position: absolute;
@@ -127,10 +128,13 @@ textarea {
     top: 16px;
   }
 
+  // ヘッダー固定後のスタイル
+  &.header-fixed {
+    position: fixed;
+  }
   /*ハンバーガーボタンクリック後*/
   &.is-active {
     position: fixed;
-    left: 3.972vw;
     .line_01 {
       top: 8px; /* 上から2番目の線の位置に変更 */
       /* 線を45度回転 */
@@ -153,7 +157,7 @@ textarea {
 .drawer_menu {
   position: fixed;
   top: 50px;
-  z-index: 1;
+  z-index: 2;
   /* 幅の分左にずらした状態で非表示 */
   left: -171px;
   width: 171px;
@@ -962,9 +966,7 @@ TAB用
 
   // ハンバーガーメニュー
   .btnHamburger {
-    &.is-active {
-      left: 2.878vw;
-    }
+    left: 2.878vw;
   }
   // ドロワーメニュー
   .drawer_menu {
@@ -1258,9 +1260,7 @@ PC用
 
   // ハンバーガーメニュー
   .btnHamburger {
-    &.is-active {
-      left: 2.5%;
-    }
+    left: 2.5%;
   }
 
   /* メインビジュアル */
