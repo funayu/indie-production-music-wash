@@ -277,9 +277,13 @@ header {
     top: 97.897vw;
   }
   .message {
-    width: 59.579vw;
     position: absolute;
     top: 120.327vw;
+    img {
+      width: 59.579vw;
+      height: 6.843vw;
+      object-fit: contain;
+    }
   }
 }
 
@@ -1386,19 +1390,20 @@ PC用
     justify-content: flex-end;
   }
   $aside_width: calc((201 / 1179) * 100%);
+  $contents_width: calc(100% - $aside_width);
   aside {
     width: $aside_width;
     padding: 35px 15px 0;
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    background-color: #fff;
   }
   .top_main,
   .sns_share,
-  main {
-    width: calc(100% - $aside_width);
-  }
+  main,
   footer {
-    width: 100%;
+    width: $contents_width;
   }
 
   header {
@@ -1441,6 +1446,13 @@ PC用
     + .sns_link {
       width: 140px;
       margin: 0;
+    }
+  }
+
+  /* メインビジュアル */
+  .top_main {
+    .message {
+      top: 54vw;
     }
   }
 }
