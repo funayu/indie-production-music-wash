@@ -44,50 +44,53 @@ mb_send_mail($to, $subject, $message, $header);
 <body class="contact contact-complete">
   <!-- ハンバーガークリックで表示されるレイヤー -->
   <div id="coverlayer"></div>
-  <header>
-    <div class="inner">
-      <!--ハンバーガーボタン-->
-      <div class="btnHamburger">
-        <span class="line line_01"></span>
-        <span class="line line_02"></span>
-        <span class="line line_03"></span>
+  <aside>
+    <header>
+      <div class="inner">
+        <!--ハンバーガーボタン-->
+        <div class="btnHamburger">
+          <span class="line line_01"></span>
+          <span class="line line_02"></span>
+          <span class="line line_03"></span>
+        </div>
+        <!--.btnHamburgerの終了タグ-->
+        <h1>
+          <a href="index.html">
+            <img src="images/logo/logotypo.svg" alt="長野県軽井沢の軽井沢中央スキー場で2022年9月3日・4日の2日間開催される音楽フェスティバル「MUSIC WASH」のロゴ" />
+          </a>
+        </h1>
+        <a href="index.html#ticket" class="btnTicket"><i class="fa-solid fa-ticket-simple icon"></i>TICKET</a>
       </div>
-      <!--.btnHamburgerの終了タグ-->
-      <h1>
-        <a href="index.html">
-          <img src="images/logo/logotypo.svg" alt="長野県軽井沢の軽井沢中央スキー場で2022年9月3日・4日の2日間開催される音楽フェスティバル「MUSIC WASH」のロゴ" />
-        </a>
-      </h1>
-      <a href="index.html#ticket" class="btnTicket"><i class="fa-solid fa-ticket-simple icon"></i>TICKET</a>
+    </header>
+    <div class="drawer_menu">
+      <nav>
+        <ul>
+          <li><img src="images/nav/news_icon.svg" alt="" /><a href="index.html#news">NEWS</a></li>
+          <li><img src="images/nav/artist-icon.svg" alt="" /><a href="index.html#artists">ARTISTS</a></li>
+          <li><img src="images/nav/time_table_icon.svg" alt="" /><a href="index.html#time_table">TIME&nbsp;TABLE</a>
+          </li>
+          <li><img src="images/nav/ticket_icon.svg" alt="" /><a href="index.html#ticket">TICKET</a></li>
+          <li><img src="images/nav/goods_icon.svg" alt="" /><a href=index.html#goods">GOODS</a></li>
+          <li><img src="images/nav/access_icon.svg" alt="" /><a href="index.html#access">ACCESS</a></li>
+          <li><img src="images/nav/contact_icon.svg" alt="" /><a href="#">CONTACT</a></li>
+        </ul>
+      </nav>
+      <div class="sns_link">
+        <div>
+          <a href="https://twitter.com/twitterjp"><img src="images/sns/twitter_blue.svg" alt="Twitterアイコン" /></a>
+        </div>
+        <div>
+          <a href="https://www.instagram.com/instagram/"><img src="images/sns/Instagram_gradient@96.png"
+              alt="Instagramアイコン" /></a>
+        </div>
+        <div>
+          <a href="https://www.facebook.com/facebook/?brand_redir=123739327653840"><img
+              src="images/sns/facebook_blue.svg" alt="Facebookアイコン" /></a>
+        </div>
+      </div>
     </div>
-  </header>
-  <div class="drawer_menu">
-    <nav>
-      <ul>
-        <li><img src="images/nav/news_icon.svg" alt="" /><a href="index.html#news">NEWS</a></li>
-        <li><img src="images/nav/artist-icon.svg" alt="" /><a href="index.html#artists">ARTISTS</a></li>
-        <li><img src="images/nav/time_table_icon.svg" alt="" /><a href="index.html#time_table">TIME&nbsp;TABLE</a></li>
-        <li><img src="images/nav/ticket_icon.svg" alt="" /><a href="index.html#ticket">TICKET</a></li>
-        <li><img src="images/nav/goods_icon.svg" alt="" /><a href=index.html#goods">GOODS</a></li>
-        <li><img src="images/nav/access_icon.svg" alt="" /><a href="index.html#access">ACCESS</a></li>
-        <li><img src="images/nav/contact_icon.svg" alt="" /><a href="#">CONTACT</a></li>
-      </ul>
-    </nav>
-    <div class="sns_link">
-      <div>
-        <a href="https://twitter.com/twitterjp"><img src="images/sns/twitter_blue.svg" alt="Twitterアイコン" /></a>
-      </div>
-      <div>
-        <a href="https://www.instagram.com/instagram/"><img src="images/sns/Instagram_gradient@96.png"
-            alt="Instagramアイコン" /></a>
-      </div>
-      <div>
-        <a href="https://www.facebook.com/facebook/?brand_redir=123739327653840"><img src="images/sns/facebook_blue.svg"
-            alt="Facebookアイコン" /></a>
-      </div>
-    </div>
-  </div>
-  <!--.sns_linkの終了タグ-->
+    <!--.sns_linkの終了タグ-->
+  </aside>
   <main>
     <article>
       <div class="inner">
