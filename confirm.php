@@ -26,16 +26,16 @@ $inquiry_detail = isset($_POST["inquiry_detail"])? $_POST["inquiry_detail"] : ""
 <body class="contact contact-confirm">
   <!-- ハンバーガークリックで表示されるレイヤー -->
   <div id="coverlayer"></div>
+  <!--ハンバーガーボタン-->
+  <div class="btnHamburger">
+    <span class="line line_01"></span>
+    <span class="line line_02"></span>
+    <span class="line line_03"></span>
+  </div>
+  <!--.btnHamburgerの終了タグ-->
   <aside>
     <header>
       <div class="inner">
-        <!--ハンバーガーボタン-->
-        <div class="btnHamburger">
-          <span class="line line_01"></span>
-          <span class="line line_02"></span>
-          <span class="line line_03"></span>
-        </div>
-        <!--.btnHamburgerの終了タグ-->
         <h1>
           <a href="index.html">
             <img src="images/logo/logotypo.svg" alt="長野県軽井沢の軽井沢中央スキー場で2022年9月3日・4日の2日間開催される音楽フェスティバル「MUSIC WASH」のロゴ" />

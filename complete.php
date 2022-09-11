@@ -44,24 +44,24 @@ mb_send_mail($to, $subject, $message, $header);
 <body class="contact contact-complete">
   <!-- ハンバーガークリックで表示されるレイヤー -->
   <div id="coverlayer"></div>
+  <!--ハンバーガーボタン-->
+  <div class="btnHamburger">
+    <span class="line line_01"></span>
+    <span class="line line_02"></span>
+    <span class="line line_03"></span>
+  </div>
+  <!--.btnHamburgerの終了タグ-->
+  <header>
+    <div class="inner">
+      <h1>
+        <a href="index.html">
+          <img src="images/logo/logotypo.svg" alt="長野県軽井沢の軽井沢中央スキー場で2022年9月3日・4日の2日間開催される音楽フェスティバル「MUSIC WASH」のロゴ" />
+        </a>
+      </h1>
+      <a href="index.html#ticket" class="btnTicket"><i class="fa-solid fa-ticket-simple icon"></i>TICKET</a>
+    </div>
+  </header>
   <aside>
-    <header>
-      <div class="inner">
-        <!--ハンバーガーボタン-->
-        <div class="btnHamburger">
-          <span class="line line_01"></span>
-          <span class="line line_02"></span>
-          <span class="line line_03"></span>
-        </div>
-        <!--.btnHamburgerの終了タグ-->
-        <h1>
-          <a href="index.html">
-            <img src="images/logo/logotypo.svg" alt="長野県軽井沢の軽井沢中央スキー場で2022年9月3日・4日の2日間開催される音楽フェスティバル「MUSIC WASH」のロゴ" />
-          </a>
-        </h1>
-        <a href="index.html#ticket" class="btnTicket"><i class="fa-solid fa-ticket-simple icon"></i>TICKET</a>
-      </div>
-    </header>
     <div class="drawer_menu">
       <nav>
         <ul>

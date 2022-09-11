@@ -21,7 +21,8 @@ $(function () {
   const btnHamburger = $('.btnHamburger')
 
   // ヘッダー固定開始位置の要素
-  const target = $('#news')
+  // ページごとに固定開始位置を変える
+  const target = location.pathname === '/index.html' ? $('#news') : $('main')
   const targetPosition = target.offset().top
   // ターゲットに元々設定されているpadding-top
   const targetPaddingTop = Number(target.css('padding-top').replace('px', ''))
