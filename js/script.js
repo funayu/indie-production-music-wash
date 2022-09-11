@@ -41,4 +41,27 @@ $(function () {
       }
     }
   })
+
+  //
+  // スムーススクロール
+  //
+  // #で始まる出発地点をクリックした場合に処理を実行
+  $('a[href^="#"]').click(function () {
+    // 出発地点のhref属性を取得
+    const href = $(this).attr('href')
+    // 到着地点を取得
+    const target = $(href == '#' || href == '' ? 'html' : href)
+
+    // ヘッダー固定しているとページ内リンクで移動した際に見出しが隠れるので、ヘッダーの高さ分上にずらして到着させる
+    // ヘッダーの高さを取得
+    const headerHeight = $('header').height()
+
+    // 到着地点を数値で取得、固定ヘッダーの高さを考慮
+    const position = target.offset().top - headerHeight
+    // スムーススクロールの実行
+    $('body,html').animate({ scrollTop: position }, 500, 'swing')
+
+    // トップへ戻るボタンを押した時のボタンちらつき防止
+    return false
+  })
 })
