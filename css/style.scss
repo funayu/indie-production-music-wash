@@ -1099,7 +1099,7 @@ TAB用
         .date_label_outer {
           width: $time_table_width;
           .date_label {
-            margin: 0 auto;
+            margin: 0 auto 30px;
             color: $base_white;
             background-color: $main_black;
             width: 22.662vw;
@@ -1108,6 +1108,9 @@ TAB用
       }
       .time_table {
         width: $time_table_width;
+        &.day_2 {
+          display: block;
+        }
       }
     }
 

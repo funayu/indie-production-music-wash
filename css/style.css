@@ -965,13 +965,16 @@ TAB用
     width: 45.444vw;
   }
   article#time_table .date_labels .date_label_outer .date_label {
-    margin: 0 auto;
+    margin: 0 auto 30px;
     color: #fff;
     background-color: #000;
     width: 22.662vw;
   }
   article#time_table .time_table {
     width: 45.444vw;
+  }
+  article#time_table .time_table.day_2 {
+    display: block;
   }
   article#ticket .tickets {
     row-gap: 30px;
