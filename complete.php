@@ -101,10 +101,11 @@ mb_send_mail($to, $subject, $message, $header);
             今しばらくお待ち下さい。
           </p>
         </div>
+        <!-- .messageの終了タグ -->
         <div class="main_button">
           <input type="button" value="戻る" onClick="location.href='index.html'">
         </div>
-        </form>
+        <!-- .main_buttonの終了タグ -->
       </div>
       <!-- .innerの修了タグ -->
     </article>
