@@ -161,4 +161,14 @@ $(function () {
     time_table_day_2.fadeIn(1000)
     time_table_day_1.hide()
   })
+
+  //
+  // lightbox用の設定
+  //
+  lightbox.option({
+    // 最後の画像の場合に1枚目に戻るナビゲーションを表示する
+    wrapAround: true,
+    // SPでナビゲーションを表示する
+    alwaysShowNavOnTouchDevices: true,
+  })
 })
