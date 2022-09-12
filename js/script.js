@@ -133,4 +133,32 @@ $(function () {
       }
     })
   }
+
+  //
+  // 表示するタイムテーブルを切り替える
+  //
+  const date_select_day_1 = $('.date_select.day_1')
+  const date_select_day_2 = $('.date_select.day_2')
+  const time_table_day_1 = $('.time_table.day_1')
+  const time_table_day_2 = $('.time_table.day_2')
+
+  // day_1のボタンが押された場合の処理
+  date_select_day_1.on('click', () => {
+    // day_1ボタンをアクティブにする
+    date_select_day_1.addClass('is_active')
+    date_select_day_2.removeClass('is_active')
+    // day_1のタイムテーブルを表示して、day2のタイムテーブルを非表示にする
+    time_table_day_1.fadeIn(1000)
+    time_table_day_2.hide()
+  })
+
+  // day_2のボタンが押された場合の処理
+  date_select_day_2.on('click', () => {
+    // day_2ボタンをアクティブにする
+    date_select_day_2.addClass('is_active')
+    date_select_day_1.removeClass('is_active')
+    // day_2の日付のタイムテーブルを表示して、day1のタイムテーブルを非表示にする
+    time_table_day_2.fadeIn(1000)
+    time_table_day_1.hide()
+  })
 })

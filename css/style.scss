@@ -473,9 +473,6 @@ article {
         color: $accent_blue_with-white;
       }
     }
-    .date_labels {
-      display: none;
-    }
     .date_select,
     .date_label {
       font-size: 24px;
@@ -484,112 +481,121 @@ article {
       border-radius: 3px;
       text-align: center;
       padding: 6px 0;
+      margin-bottom: 30px;
       span {
         font-size: 16px;
         padding-left: 0.3em;
       }
     }
+    .date_labels {
+      display: none;
+    }
     .date_select {
       color: #848484;
       background-color: #d5d5d5;
       cursor: pointer;
+      transition: 0.8s;
       &.is_active {
         color: $base_white;
         background-color: $main_black;
       }
     }
-    .time_table {
-      width: 100%;
-      padding-top: 30px;
+  }
+  .time_table {
+    display: none;
+    width: 100%;
+    // 初期表示はday_1を表示する
+    &.day_1 {
+      display: block;
+    }
 
-      .time_table_row {
-        display: flex;
-        height: 60px;
+    .time_table_row {
+      display: flex;
+      height: 60px;
 
-        &.heading {
-          height: 32px;
-          margin-bottom: 10px;
-
-          .stage {
-            > div {
-              color: $base_white;
-              text-align: center;
-              line-height: 32px;
-              font-family: 'Heebo-Bold';
-            }
-            &.stage_1 {
-              background-color: $accent_blue_with-white;
-            }
-            &.stage_2 {
-              background-color: $accent_orange_with-white;
-            }
-          }
-        }
-
-        &:nth-of-type(2) .stage_2 {
-          position: relative;
-
-          &::after {
-            content: 'OPEN 9:30 / START 10:00';
-            position: absolute;
-            top: 50%;
-            left: 0;
-            transform: translate(-50%, -50%);
-            /* テキストの折返しをなくす */
-            white-space: nowrap;
-            background-color: $base_white;
-            font-size: 14px;
-            padding: 4px 8px;
-          }
-        }
-
-        .time {
-          width: calc((68 / 396) * 100%);
-          text-align: center;
-          font-size: 14px;
-
-          > div {
-            transform: translateY(-50%);
-          }
-        }
+      &.heading {
+        height: 32px;
+        margin-bottom: 10px;
 
         .stage {
-          width: calc((164 / 396) * 100%);
-          position: relative;
-
-          .artist_name {
-            padding: 2.5px 0 0 8px;
-            height: 100%;
+          > div {
+            color: $base_white;
+            text-align: center;
+            line-height: 32px;
             font-family: 'Heebo-Bold';
           }
-          .time_label {
-            position: absolute;
-            top: 0;
-            left: 0;
-            transform: translateY(-100%);
-            font-size: 12px;
-            padding: 2px 8px;
-            color: $base_white;
-          }
           &.stage_1 {
-            background-color: $accent_blue_light;
-
-            .artist_name {
-              background-color: $accent_blue;
-            }
-            .time_label {
-              background-color: $accent_blue_dark;
-            }
+            background-color: $accent_blue_with-white;
           }
           &.stage_2 {
-            background-color: $accent_orange_light;
+            background-color: $accent_orange_with-white;
+          }
+        }
+      }
 
-            .artist_name {
-              background-color: $accent_orange;
-            }
-            .time_label {
-              background-color: $accent_orange_dark;
-            }
+      &:nth-of-type(2) .stage_2 {
+        position: relative;
+
+        &::after {
+          content: 'OPEN 9:30 / START 10:00';
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translate(-50%, -50%);
+          /* テキストの折返しをなくす */
+          white-space: nowrap;
+          background-color: $base_white;
+          font-size: 14px;
+          padding: 4px 8px;
+        }
+      }
+
+      .time {
+        width: calc((68 / 396) * 100%);
+        text-align: center;
+        font-size: 14px;
+
+        > div {
+          transform: translateY(-50%);
+        }
+      }
+
+      .stage {
+        width: calc((164 / 396) * 100%);
+        position: relative;
+
+        .artist_name {
+          padding: 2.5px 0 0 8px;
+          height: 100%;
+          font-family: 'Heebo-Bold';
+        }
+        .time_label {
+          position: absolute;
+          top: 0;
+          left: 0;
+          transform: translateY(-100%);
+          font-size: 12px;
+          padding: 2px 8px;
+          color: $base_white;
+        }
+        &.stage_1 {
+          background-color: $accent_blue_light;
+
+          .artist_name {
+            background-color: $accent_blue;
+          }
+          .time_label {
+            background-color: $accent_blue_dark;
+          }
+        }
+        &.stage_2 {
+          background-color: $accent_orange_light;
+
+          .artist_name {
+            background-color: $accent_orange;
+          }
+          .time_label {
+            background-color: $accent_orange_dark;
           }
         }
       }
@@ -794,7 +800,6 @@ article {
     }
   }
 }
-
 .outline {
   padding: 54px 0 101px;
   position: relative;

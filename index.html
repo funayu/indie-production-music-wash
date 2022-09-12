@@ -87,24 +87,33 @@
     <!--		TODO:シェアするURL修正、サーバに上げて動作確認-->
     <div class="sns_share">
       <ul>
+        <!-- Twitterシェア -->
         <li>
           <img src="images/sns/twitter_rounded_square_blue.svg" alt="Twitterアイコン" />
           <a
-            href="http://twitter.com/share?url=https://www.google.com/&text=MUSIC%20WASH%20FESTIVAL%202022チケット販売中！&hashtags=musicwash"
+            href="http://twitter.com/share?url=http%3A%2F%2Ftokyo-d-plex.com%2F%7E2204funada%2Ftask-4%2Findex.html&text=MUSIC%20WASH%20FESTIVAL%202022チケット販売中！&hashtags=musicwash"
             target="_blank"
             >ツイートする</a
           >
         </li>
+        <!-- LINEシェア -->
         <li>
           <img src="images/sns/line.svg" alt="LINEアイコン" />
 
-          <a href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Fwww.google.com%2F" target="_blank"
+          <a
+            href="https://social-plugins.line.me/lineit/share?url=http%3A%2F%2Ftokyo-d-plex.com%2F%7E2204funada%2Ftask-4%2Findex.html"
+            target="_blank"
             >シェアする</a
           >
         </li>
+        <!-- Facebookシェア -->
         <li>
           <img src="images/sns/facebook_blue.svg" alt="Facebookアイコン" />
-          <a href="http://www.facebook.com/share.php?u=https://www.google.com/" target="_blank">シェアする</a>
+          <a
+            href="http://www.facebook.com/share.php?u=http%3A%2F%2Ftokyo-d-plex.com%2F%7E2204funada%2Ftask-4%2Findex.html"
+            target="_blank"
+            >シェアする</a
+          >
         </li>
       </ul>
     </div>
@@ -452,8 +461,8 @@
       <article id="time_table">
         <div class="inner">
           <h2><span>T</span>IME TABLE</h2>
-          <div class="date_select is_active">9/3<span>SAT</span></div>
-          <div class="date_select">9/4<span>SAN</span></div>
+          <div class="date_select day_1 is_active">9/3<span>SAT</span></div>
+          <div class="date_select day_2">9/4<span>SAN</span></div>
           <div class="date_labels">
             <div class="date_label_outer">
               <div class="date_label">9/3<span>SAT</span></div>
@@ -462,7 +471,7 @@
               <div class="date_label">9/4<span>SAN</span></div>
             </div>
           </div>
-          <div class="time_table">
+          <div class="time_table day_1">
             <div class="time_table_row heading">
               <div class="time"></div>
               <div class="stage stage_1">
@@ -614,8 +623,8 @@
             </div>
             <!--.time_table_rowの終了タグ-->
           </div>
-          <!--.time_tableの終了タグ-->
-          <div class="time_table">
+          <!--.time_table day_1の終了タグ-->
+          <div class="time_table day_2">
             <div class="time_table_row heading">
               <div class="time"></div>
               <div class="stage stage_1">
@@ -767,7 +776,7 @@
             </div>
             <!--.time_table_rowの終了タグ-->
           </div>
-          <!--.time_tableの終了タグ-->
+          <!--.time_table day_2の終了タグ-->
         </div>
         <!--.innerの終了タグ-->
       </article>
