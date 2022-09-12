@@ -141,7 +141,7 @@ $(function () {
       // 要素のclass名と同じid名持つボックスを表示
       content_source: '#' + $(element).attr('class'),
       overlay_opacity: 1,
-      // モーダル内をクリックするとエラーになる（原因不明）ので、モーダルを閉じたあと画面再読み込みする
+      // モーダル内をクリックするとエラーになるので、モーダルを閉じたあと画面再読み込みしてエラー状態を回復する
       after_close: function () {
         location.reload()
       },
@@ -167,7 +167,7 @@ $(function () {
     date_select_day_1.addClass('is_active')
     date_select_day_2.removeClass('is_active')
     // day_1のタイムテーブルを表示して、day2のタイムテーブルを非表示にする
-    time_table_day_1.fadeIn(1000)
+    time_table_day_1.fadeIn(500)
     time_table_day_2.hide()
   })
 
@@ -177,17 +177,19 @@ $(function () {
     date_select_day_2.addClass('is_active')
     date_select_day_1.removeClass('is_active')
     // day_2の日付のタイムテーブルを表示して、day1のタイムテーブルを非表示にする
-    time_table_day_2.fadeIn(1000)
+    time_table_day_2.fadeIn(500)
     time_table_day_1.hide()
   })
 
   //
   // lightbox用の設定
   //
-  lightbox.option({
-    // 最後の画像の場合に1枚目に戻るナビゲーションを表示する
-    wrapAround: true,
-    // SPでナビゲーションを表示する
-    alwaysShowNavOnTouchDevices: true,
-  })
+  if (location.pathname === '/index.html') {
+    lightbox.option({
+      // 最後の画像の場合に1枚目に戻るナビゲーションを表示する
+      wrapAround: true,
+      // SPでナビゲーションを表示する
+      alwaysShowNavOnTouchDevices: true,
+    })
+  }
 })

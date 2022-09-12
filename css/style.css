@@ -557,6 +557,7 @@ article#ticket .tickets section.ticket h3 span.day_2 {
 article#ticket .tickets section.ticket p {
   font-size: 20px;
   font-weight: bold;
+  font-family: "Heebo-Bold", "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, "sans-serif";
 }
 article#ticket .tickets section.ticket p span {
   font-size: 32px;
