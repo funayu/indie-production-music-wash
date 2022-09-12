@@ -1242,6 +1242,9 @@ PC用
     width: 226px;
     height: 226px;
   }
+  .modal_container .artist_img {
+    width: 281px;
+  }
   body.contact .main_button input[type=submit],
 body.contact .main_button input[type=button] {
     width: 230px;
