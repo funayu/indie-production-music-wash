@@ -59,14 +59,15 @@ $inquiry_detail = isset($_POST["inquiry_detail"])? $_POST["inquiry_detail"] : ""
       </nav>
       <div class="sns_link">
         <div>
-          <a href="https://twitter.com/twitterjp"><img src="images/sns/twitter_blue.svg" alt="Twitterアイコン" /></a>
+          <a href="https://twitter.com/twitterjp" target="_blank"><img src="images/sns/twitter_blue.svg"
+              alt="Twitterアイコン" /></a>
         </div>
         <div>
-          <a href="https://www.instagram.com/instagram/"><img src="images/sns/Instagram_gradient@96.png"
+          <a href="https://www.instagram.com/instagram/" target="_blank"><img src="images/sns/Instagram_gradient@96.png"
               alt="Instagramアイコン" /></a>
         </div>
         <div>
-          <a href="https://www.facebook.com/facebook/?brand_redir=123739327653840"><img
+          <a href="https://www.facebook.com/facebook/?brand_redir=123739327653840" target="_blank"><img
               src="images/sns/facebook_blue.svg" alt="Facebookアイコン" /></a>
         </div>
       </div>
