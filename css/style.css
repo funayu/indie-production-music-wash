@@ -773,6 +773,43 @@ footer small {
   font-size: 12px;
 }
 
+[id^=modal] {
+  display: none;
+}
+
+.modal_container {
+  padding: 100px 0;
+  text-align: center;
+}
+.modal_container .artist_img {
+  width: 65.654vw;
+  margin: 0 auto;
+}
+.modal_container p.artist_name {
+  font-family: "heebo-Bold";
+  font-size: 22px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.modal_container .sns_link {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 10px;
+}
+.modal_container .sns_link div {
+  padding: 16px;
+}
+.modal_container .sns_link div img {
+  width: 32px;
+  height: 32px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.modal_container a.official_site_link {
+  color: #000;
+  text-decoration: underline;
+}
+
 .to_top {
   width: 40px;
   line-height: 40px;

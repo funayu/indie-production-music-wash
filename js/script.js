@@ -134,6 +134,25 @@ $(function () {
     })
   }
 
+  // アーティスト画像クリック時のモーダル設定
+  // class名が「modal」から始まる要素を取得してループ
+  $("[class^='modal']").each(function (i, element) {
+    $(element).modaal({
+      // 要素のclass名と同じid名持つボックスを表示
+      content_source: '#' + $(element).attr('class'),
+      overlay_opacity: 1,
+      // モーダル内をクリックするとエラーになる（原因不明）ので、モーダルを閉じたあと画面再読み込みする
+      after_close: function () {
+        location.reload()
+      },
+    })
+  })
+  // モーダル内のaタグクリックイベントが効かないのでJSで設定
+  $('.link').on('click', function () {
+    window.open($(this).attr('href'), '_blank')
+    return false
+  })
+
   //
   // 表示するタイムテーブルを切り替える
   //

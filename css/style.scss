@@ -880,6 +880,43 @@ footer {
   }
 }
 
+// モーダルの設定
+[id^='modal'] {
+  display: none;
+}
+.modal_container {
+  padding: 100px 0;
+  text-align: center;
+  .artist_img {
+    width: 65.654vw;
+    margin: 0 auto;
+  }
+  p.artist_name {
+    font-family: 'heebo-Bold';
+    font-size: 22px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .sns_link {
+    $sns_icon_size: 32px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 10px;
+    div {
+      padding: 16px;
+      img {
+        width: $sns_icon_size;
+        height: $sns_icon_size;
+        object-fit: contain;
+      }
+    }
+  }
+  a.official_site_link {
+    color: $main_black;
+    text-decoration: underline;
+  }
+}
+
 // 上へ戻るボタン
 .to_top {
   width: 40px;
