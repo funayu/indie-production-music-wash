@@ -199,9 +199,14 @@ header h1 {
   top: 12.25px;
   left: 50%;
   transform: translateX(-50%);
+  transition: opacity 0.7s;
+}
+header h1:hover {
+  opacity: 0.7;
 }
 header h1 img {
   vertical-align: middle;
+  transition: 1s;
 }
 header a.btnTicket {
   position: absolute;
@@ -214,6 +219,10 @@ header a.btnTicket {
   border-radius: 3px;
   font-size: 14px;
   font-family: "Heebo-Bold";
+  transition: opacity 0.7s;
+}
+header a.btnTicket:hover {
+  opacity: 0.7;
 }
 header a.btnTicket .icon {
   padding-right: 4px;
@@ -309,6 +318,10 @@ header a.btnTicket .icon {
   padding: 16px 0;
   border: 2px solid #fff;
   border-radius: 3px;
+  transition: opacity 0.7s;
+}
+.sns_share ul li:hover {
+  opacity: 0.7;
 }
 .sns_share ul li img {
   width: 32px;
@@ -428,6 +441,9 @@ article#time_table .date_select {
   background-color: #d5d5d5;
   cursor: pointer;
   transition: 0.8s;
+}
+article#time_table .date_select:hover {
+  opacity: 0.8;
 }
 article#time_table .date_select.is_active {
   color: #fff;
@@ -850,6 +866,11 @@ body.contact .main_button input[type=button] {
   width: 44.393vw;
   padding: 10px 0;
   font-weight: bold;
+  transition: opacity 0.7s;
+}
+body.contact .main_button input[type=submit]:hover,
+body.contact .main_button input[type=button]:hover {
+  opacity: 0.7;
 }
 body.contact main article {
   padding: 60px 0 100px;
@@ -897,6 +918,10 @@ body.contact-confirm main article form .back_button input {
   cursor: pointer;
   font-weight: bold;
   color: #000;
+  transition: opacity 0.7s;
+}
+body.contact-confirm main article form .back_button input:hover {
+  opacity: 0.7;
 }
 body.contact-complete .message {
   display: flex;
