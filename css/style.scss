@@ -960,6 +960,17 @@ footer {
   }
 }
 
+// 要素のフェードインアニメーション用
+.fade_off {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 1s;
+}
+.fade_on {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
 // コンタクトフォーム
 body.contact {
   // ボタンの共通スタイル

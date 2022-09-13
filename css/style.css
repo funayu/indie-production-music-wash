@@ -853,6 +853,17 @@ footer small {
   font-size: 20px;
 }
 
+.fade_off {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 1s;
+}
+
+.fade_on {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
 body.contact .main_button {
   text-align: center;
 }

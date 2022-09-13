@@ -167,7 +167,7 @@ $(function () {
     date_select_day_1.addClass('is_active')
     date_select_day_2.removeClass('is_active')
     // day_1のタイムテーブルを表示して、day2のタイムテーブルを非表示にする
-    time_table_day_1.fadeIn(500)
+    time_table_day_1.show()
     time_table_day_2.hide()
   })
 
@@ -177,7 +177,7 @@ $(function () {
     date_select_day_2.addClass('is_active')
     date_select_day_1.removeClass('is_active')
     // day_2の日付のタイムテーブルを表示して、day1のタイムテーブルを非表示にする
-    time_table_day_2.fadeIn(500)
+    time_table_day_2.show()
     time_table_day_1.hide()
   })
 
@@ -192,4 +192,20 @@ $(function () {
       alwaysShowNavOnTouchDevices: true,
     })
   }
+
+  //
+  // スクロールに連動して要素をフェード表示する
+  //
+  $(window).scroll(function () {
+    $('.fd').each(function () {
+      const imgPos = $(this).offset().top
+      const scroll = $(window).scrollTop()
+      const windowHeight = $(window).height()
+      if (scroll > imgPos - windowHeight + windowHeight / 5) {
+        $(this).addClass('fade_on')
+      } else {
+        $(this).removeClass('fade_on')
+      }
+    })
+  })
 })
