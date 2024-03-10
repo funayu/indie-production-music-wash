@@ -5,9 +5,9 @@ mb_internal_encoding("UTF-8");
 // データ格納
 $to = $_POST["email"];//メール送信先の設定
 $subject = "【MUSIC WASH】お問い合わせありがとうございます";//メールの件名
-$header = "From: info@tdp.com";//送信元アドレス
+$header = "From: info@test.com";//送信元アドレス（ダミー）
 $header .= "\n";//改行
-$header .= "Bcc: tiro349@moimoi.re";//確認メール管理者受信用
+$header .= "Bcc: dummy@test.com";//確認メール管理者受信用（ダミー）
 //$header .= "Bcc: tdp@sairafactory.com";//確認メール管理者受信用
 $message = "この度はお問い合わせいただきありがとうございます。" . "\n" . "お問い合わせ内容は下記となります。" . "\n" .
 "\n" .
