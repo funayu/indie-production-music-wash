@@ -1,25 +1,26 @@
 <?php
-mb_language("japanese");
-mb_internal_encoding("UTF-8");
+// メール送信を無効化
+// mb_language("japanese");
+// mb_internal_encoding("UTF-8");
 
-// データ格納
-$to = $_POST["email"];//メール送信先の設定
-$subject = "【MUSIC WASH】お問い合わせありがとうございます";//メールの件名
-$header = "From: info@test.com";//送信元アドレス（ダミー）
-$header .= "\n";//改行
-$header .= "Bcc: dummy@test.com";//確認メール管理者受信用（ダミー）
-//$header .= "Bcc: tdp@sairafactory.com";//確認メール管理者受信用
-$message = "この度はお問い合わせいただきありがとうございます。" . "\n" . "お問い合わせ内容は下記となります。" . "\n" .
-"\n" .
-"お名前：" . $_POST["name"] . "\n" .
-"メールアドレス：" . $_POST["email"] . "\n" .
-"お問い合わせ内容：" . $_POST["inquiry_detail"] . "\n" .
+// // データ格納
+// $to = $_POST["email"];//メール送信先の設定
+// $subject = "【MUSIC WASH】お問い合わせありがとうございます";//メールの件名
+// $header = "From: info@test.com";//送信元アドレス（ダミー）
+// $header .= "\n";//改行
+// $header .= "Bcc: dummy@test.com";//確認メール管理者受信用（ダミー）
+// //$header .= "Bcc: tdp@sairafactory.com";//確認メール管理者受信用
+// $message = "この度はお問い合わせいただきありがとうございます。" . "\n" . "お問い合わせ内容は下記となります。" . "\n" .
+// "\n" .
+// "お名前：" . $_POST["name"] . "\n" .
+// "メールアドレス：" . $_POST["email"] . "\n" .
+// "お問い合わせ内容：" . $_POST["inquiry_detail"] . "\n" .
 
-"\n" .
-"※2営業日以内に返信がない場合は、お手数ですがcontact@music-wash.comまでご連絡ください。";
+// "\n" .
+// "※2営業日以内に返信がない場合は、お手数ですがcontact@music-wash.comまでご連絡ください。";
 
-// メール送信
-mb_send_mail($to, $subject, $message, $header);
+// // メール送信
+// mb_send_mail($to, $subject, $message, $header);
 
 ?>
 <!DOCTYPE html>
